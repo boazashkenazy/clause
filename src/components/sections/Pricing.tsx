@@ -28,8 +28,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
     threshold: 0.1,
   });
 
-  const currentPrice = isYearly ? price.yearly : price.monthly;
-  const discount = Math.round(100 - (price.yearly / price.monthly * 100) / 12);
+  const currentPrice = price ? (isYearly ? price.yearly : price.monthly) : null;
+  const discount = price ? Math.round(100 - (price.yearly / price.monthly * 100) / 12) : 0;
 
   return (
     <motion.div 
@@ -51,13 +51,19 @@ const PricingCard: React.FC<PricingCardProps> = ({
       </div>
       
       <div className="my-6">
-        <span className="text-4xl font-bold text-gray-900">${currentPrice}</span>
-        <span className="text-gray-600">/{isYearly ? 'year' : 'month'}</span>
-        
-        {isYearly && (
-          <span className="ml-2 rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">
-            Save {discount}%
-          </span>
+        {price ? (
+          <>
+            <span className="text-4xl font-bold text-gray-900">${currentPrice}</span>
+            <span className="text-gray-600">/{isYearly ? 'year' : 'month'}</span>
+            
+            {isYearly && (
+              <span className="ml-2 rounded-full bg-green-100 px-2 py-1 text-xs font-medium text-green-800">
+                Save {discount}%
+              </span>
+            )}
+          </>
+        ) : (
+          <span className="text-2xl font-medium text-gray-900">Contact Us</span>
         )}
       </div>
       
@@ -125,44 +131,42 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onPurchase }) => {
 
   const plans: PricingPlanProps[] = [
     {
-      title: "Individual",
-      price: { monthly: 19, yearly: 182 },
-      description: "Perfect for single users working independently.",
+      title: "Solo",
+      price: { monthly: 20, yearly: 200 },
+      description: "Perfect for individual legal professionals.",
       features: [
-        "Full access to Redline plugin",
-        "Custom policy creation",
-        "Unlimited documents",
-        "Basic support",
-        "Regular updates"
+        "1 user license",
+        "Basic policy templates",
+        "Email support",
+        "Regular updates",
+        "14-day free trial"
       ],
-      cta: "Get Started"
+      cta: "Start Free Trial"
     },
     {
       title: "Team",
-      price: { monthly: 49, yearly: 470 },
-      description: "Ideal for small teams with shared policies.",
+      price: { monthly: 50, yearly: 500 },
+      description: "Ideal for small firms or in-house teams.",
       features: [
-        "Everything in Individual",
-        "5 user licenses",
-        "Shared policy libraries",
-        "Team admin controls",
+        "Up to 5 user licenses",
+        "Advanced policy templates",
         "Priority support",
-        "Advanced statistics"
+        "Team collaboration features",
+        "Custom policy creation"
       ],
-      cta: "Get Started",
+      cta: "Start Free Trial",
       popular: true
     },
     {
       title: "Enterprise",
-      price: { monthly: 129, yearly: 1238 },
+      price: null,
       description: "For large organizations with complex needs.",
       features: [
-        "Everything in Team",
         "Unlimited users",
-        "Custom integration",
+        "Custom policy development",
         "Dedicated account manager",
-        "SSO authentication",
-        "Custom training sessions"
+        "Premium support",
+        "Custom integration & training"
       ],
       cta: "Contact Sales"
     }
@@ -178,13 +182,6 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onPurchase }) => {
           transition={{ duration: 0.5 }}
           className="mx-auto max-w-3xl text-center"
         >
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Simple, Transparent Pricing
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Choose the plan that works best for you or your team. All plans include full access to Redline's powerful features.
-          </p>
-          
           <div className="mt-10">
             <PricingToggle isYearly={isYearly} onChange={setIsYearly} />
           </div>
