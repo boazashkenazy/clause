@@ -9,7 +9,7 @@ export interface PricingPlanProps {
   price: {
     monthly: number;
     yearly: number;
-  };
+  } | null;
   description: string;
   features: string[];
   cta: string;

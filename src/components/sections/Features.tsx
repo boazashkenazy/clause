@@ -70,7 +70,7 @@ const Features: React.FC = () => {
   ];
 
   return (
-    <section id="features" className="bg-gray-50 py-24">
+    <section id="features" className="scroll-mt-20 bg-gray-50 py-24">
       <Container>
         <motion.div 
           ref={ref}

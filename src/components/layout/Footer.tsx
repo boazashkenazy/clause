@@ -2,9 +2,17 @@ import React from 'react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import { Mail } from 'lucide-react';
+import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
   const currentYear = new Date().getFullYear();
+
+  const scrollToSection = (sectionId: string) => {
+    const element = document.getElementById(sectionId);
+    if (element) {
+      element.scrollIntoView({ behavior: 'smooth' });
+    }
+  };
 
   return (
     <footer className="bg-gray-50 pt-16">
@@ -37,23 +45,23 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-medium text-gray-900">Product</h4>
             <ul className="mt-4 space-y-2">
-              <li><a href="#features" className="text-gray-600 hover:text-primary-600">Features</a></li>
-              <li><a href="#how-it-works" className="text-gray-600 hover:text-primary-600">How It Works</a></li>
-              <li><a href="/pricing" className="text-gray-600 hover:text-primary-600">Pricing</a></li>
-              <li><a href="/faq" className="text-gray-600 hover:text-primary-600">FAQ</a></li>
+              <li><Link to="/" onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-primary-600">Features</Link></li>
+              <li><Link to="/" onClick={() => scrollToSection('how-it-works')} className="text-gray-600 hover:text-primary-600">How It Works</Link></li>
+              <li><Link to="/pricing" className="text-gray-600 hover:text-primary-600">Pricing</Link></li>
+              <li><Link to="/faq" className="text-gray-600 hover:text-primary-600">FAQ</Link></li>
             </ul>
           </div>
 
           <div>
             <h4 className="font-medium text-gray-900">Support</h4>
             <ul className="mt-4 space-y-2">
-              <li><a href="#" className="text-gray-600 hover:text-primary-600">Documentation</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary-600">Contact Support</a></li>
-              <li><a href="#" className="text-gray-600 hover:text-primary-600">Status</a></li>
+              <li><Link to="/" onClick={() => scrollToSection('video-demo')} className="text-gray-600 hover:text-primary-600">Documentation</Link></li>
+              <li><Link to="/terms" className="text-gray-600 hover:text-primary-600">Terms & Conditions</Link></li>
+              <li><Link to="/privacy" className="text-gray-600 hover:text-primary-600">Privacy Policy</Link></li>
               <li>
-                <a href="mailto:contact@redline.com" className="flex items-center text-gray-600 hover:text-primary-600">
+                <a href="mailto:redline@augmentedailabs.com" className="flex items-center text-gray-600 hover:text-primary-600">
                   <Mail size={16} className="mr-1 text-primary-600" />
-                  contact@redline.com
+                  redline@augmentedailabs.com
                 </a>
               </li>
             </ul>

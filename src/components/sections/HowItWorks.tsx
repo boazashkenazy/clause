@@ -56,7 +56,7 @@ const HowItWorks: React.FC = () => {
   });
 
   return (
-    <section id="how-it-works" className="bg-white py-24">
+    <section id="how-it-works" className="scroll-mt-20 bg-white py-24">
       <Container>
         <motion.div 
           ref={ref}

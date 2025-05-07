@@ -16,7 +16,7 @@ const VideoDemo: React.FC<VideoDemoProps> = ({ onDemoClick }) => {
   });
 
   return (
-    <section className="bg-white py-24">
+    <section id="video-demo" className="scroll-mt-20 bg-white py-24">
       <Container>
         <motion.div 
           ref={ref}
