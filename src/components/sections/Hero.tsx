@@ -1,12 +1,35 @@
-import React, { useState } from 'react';
+import React, { useState, useRef } from 'react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
-import VideoModal from '../ui/VideoModal';
 import { motion } from 'framer-motion';
-import { Play } from 'lucide-react';
+import { Play, Pause } from 'lucide-react';
 
 const Hero: React.FC = () => {
-  const [isVideoOpen, setIsVideoOpen] = useState(false);
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleVideo = () => {
+    if (!showVideo) {
+      setShowVideo(true);
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.play();
+          setIsVideoPlaying(true);
+        }
+      }, 100);
+    } else {
+      if (videoRef.current) {
+        if (isVideoPlaying) {
+          videoRef.current.pause();
+          setIsVideoPlaying(false);
+        } else {
+          videoRef.current.play();
+          setIsVideoPlaying(true);
+        }
+      }
+    }
+  };
 
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white pt-16">
@@ -75,28 +98,42 @@ const Hero: React.FC = () => {
             />
           </div>
           
-          {/* Video thumbnail */}
-          <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100 shadow-lg w-full max-w-4xl cursor-pointer group"
-               onClick={() => setIsVideoOpen(true)}>
-            <img 
-              src="https://img.youtube.com/vi/QYO7jwvk5X0/maxresdefault.jpg"
-              alt="Clause Demo Video" 
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-              <div className="flex items-center justify-center w-20 h-20 bg-white/90 rounded-full group-hover:bg-white group-hover:scale-110 transition-all">
-                <Play className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" />
+          {/* Video container */}
+          <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100 shadow-lg w-full max-w-4xl">
+            {showVideo ? (
+              <video
+                ref={videoRef}
+                className="h-full w-full object-cover"
+                poster="/images/clause-screencapture.jpg"
+                controls
+                onPlay={() => setIsVideoPlaying(true)}
+                onPause={() => setIsVideoPlaying(false)}
+                onEnded={() => {
+                  setIsVideoPlaying(false);
+                  setShowVideo(false);
+                }}
+              >
+                <source src="/images/clause-demo-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <div className="relative cursor-pointer group h-full w-full" onClick={toggleVideo}>
+                <img 
+                  src="/images/clause-screencapture.jpg"
+                  alt="Clause Demo Video" 
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+                  <div className="flex items-center justify-center w-20 h-20 bg-white/90 rounded-full group-hover:bg-white group-hover:scale-110 transition-all">
+                    <Play className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" />
+                  </div>
+                </div>
               </div>
-            </div>
+            )}
           </div>
         </motion.div>
       </div>
 
-      <VideoModal 
-        isOpen={isVideoOpen}
-        onClose={() => setIsVideoOpen(false)}
-        videoSrc="https://www.youtube.com/embed/QYO7jwvk5X0"
-      />
     </section>
   );
 };
