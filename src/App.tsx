@@ -8,8 +8,6 @@ import FAQ from './pages/FAQ';
 import Checkout from './pages/Checkout';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
-import VideoModal from './components/ui/VideoModal';
-import { useModal } from './hooks/useModal';
 import { useEffect } from 'react';
 
 function ScrollToTop() {
@@ -23,9 +21,6 @@ function ScrollToTop() {
 }
 
 function App() {
-  const demoVideoSrc = "https://www.youtube.com/embed/dQw4w9WgXcQ";
-  const { isOpen, open, close } = useModal();
-
   return (
     <Router>
       <ScrollToTop />
@@ -34,7 +29,7 @@ function App() {
         
         <main>
           <Routes>
-            <Route path="/" element={<Home onDemoClick={open} />} />
+            <Route path="/" element={<Home />} />
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/checkout" element={<Checkout />} />
@@ -44,12 +39,6 @@ function App() {
         </main>
         
         <Footer />
-        
-        <VideoModal 
-          isOpen={isOpen}
-          onClose={close}
-          videoSrc={demoVideoSrc}
-        />
       </div>
     </Router>
   );

@@ -1,13 +1,40 @@
-import React from 'react';
+import React, { useState, useRef } from 'react';
 import Container from '../ui/Container';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
+import { Play } from 'lucide-react';
 
 const VideoDemo: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
+
+  const [isVideoPlaying, setIsVideoPlaying] = useState(false);
+  const [showVideo, setShowVideo] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  const toggleVideo = () => {
+    if (!showVideo) {
+      setShowVideo(true);
+      setTimeout(() => {
+        if (videoRef.current) {
+          videoRef.current.play();
+          setIsVideoPlaying(true);
+        }
+      }, 100);
+    } else {
+      if (videoRef.current) {
+        if (isVideoPlaying) {
+          videoRef.current.pause();
+          setIsVideoPlaying(false);
+        } else {
+          videoRef.current.play();
+          setIsVideoPlaying(true);
+        }
+      }
+    }
+  };
 
   return (
     <section id="video-demo" className="scroll-mt-20 bg-white py-24">
@@ -34,12 +61,36 @@ const VideoDemo: React.FC = () => {
           className="mx-auto mt-12 max-w-5xl"
         >
           <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100 shadow-lg">
-            <img 
-              src="/images/clause-screencapture.jpg"
-              alt="Video thumbnail" 
-              className="h-full w-full object-cover"
-            />
-            <div className="absolute inset-0 bg-black/40"></div>
+            {showVideo ? (
+              <video
+                ref={videoRef}
+                className="h-full w-full object-cover"
+                poster="/images/clause-screencapture.jpg"
+                controls
+                onPlay={() => setIsVideoPlaying(true)}
+                onPause={() => setIsVideoPlaying(false)}
+                onEnded={() => {
+                  setIsVideoPlaying(false);
+                  setShowVideo(false);
+                }}
+              >
+                <source src="/images/clause-demo-video.mp4" type="video/mp4" />
+                Your browser does not support the video tag.
+              </video>
+            ) : (
+              <div className="relative cursor-pointer group h-full w-full" onClick={toggleVideo}>
+                <img 
+                  src="/images/clause-screencapture.jpg"
+                  alt="Clause Demo Video" 
+                  className="h-full w-full object-cover"
+                />
+                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+                  <div className="flex items-center justify-center w-20 h-20 bg-white/90 rounded-full group-hover:bg-white group-hover:scale-110 transition-all">
+                    <Play className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" />
+                  </div>
+                </div>
+              </div>
+            )}
           </div>
         </motion.div>
       </Container>
