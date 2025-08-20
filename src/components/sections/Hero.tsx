@@ -1,14 +1,13 @@
-import React from 'react';
-import { Play } from 'lucide-react';
+import React, { useState } from 'react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
+import VideoModal from '../ui/VideoModal';
 import { motion } from 'framer-motion';
+import { Play } from 'lucide-react';
 
-interface HeroProps {
-  onDemoClick: () => void;
-}
+const Hero: React.FC = () => {
+  const [isVideoOpen, setIsVideoOpen] = useState(false);
 
-const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
   return (
     <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white pt-16">
       <Container>
@@ -19,7 +18,7 @@ const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Policy-Powered Editing for Microsoft Word
+            Legal Intelligence for Business
           </motion.h1>
           <motion.p 
             className="mx-auto mt-6 max-w-2xl text-xl text-gray-600"
@@ -27,10 +26,10 @@ const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Automatically redline documents based on your business policies, without leaving Word.
+            Draft, review and revise with the full power of AI seamlessly integrated into Microsoft Word.
           </motion.p>
           <motion.div 
-            className="mt-10 flex flex-col items-center justify-center space-y-4 sm:flex-row sm:space-x-4 sm:space-y-0"
+            className="mt-10 flex flex-col items-center justify-center"
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
@@ -38,37 +37,66 @@ const Hero: React.FC<HeroProps> = ({ onDemoClick }) => {
             <Button 
               variant="primary" 
               size="lg" 
-              onClick={() => window.location.href = '#pricing'}
+              onClick={() => window.location.href = '/pricing'}
             >
-              Try Redline
-            </Button>
-            <Button 
-              variant="outline" 
-              size="lg" 
-              onClick={onDemoClick}
-              className="group"
-            >
-              <Play size={18} className="mr-2 text-primary-600 transition-transform group-hover:scale-110" />
-              Watch Demo
+              Try Clause Now
             </Button>
           </motion.div>
         </div>
       </Container>
       
-      <div className="relative mx-auto max-w-6xl px-4 pb-20 sm:px-6 lg:px-8">
+      <div className="relative mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
         <motion.div 
-          className="rounded-xl border border-gray-100 bg-white p-2 shadow-xl"
+          className="text-center"
+          initial={{ opacity: 0, y: 20 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.6, delay: 0.6 }}
+        >
+          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
+            See Clause in Action
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
+            Watch how Clause transforms document reviewing in just seconds.
+          </p>
+        </motion.div>
+
+        <motion.div 
+          className="mt-12 flex flex-col items-center gap-8"
           initial={{ opacity: 0, y: 40 }}
           animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.6 }}
+          transition={{ duration: 0.8, delay: 0.8 }}
         >
-          <img 
-            src="https://images.pexels.com/photos/4792729/pexels-photo-4792729.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2" 
-            alt="Redline in action" 
-            className="w-full rounded-lg"
-          />
+          {/* Clause Word image */}
+          <div className="mb-4">
+            <img 
+              src="/images/clause-word.png"
+              alt="Document to Microsoft Word integration" 
+              className="h-[10rem]"
+            />
+          </div>
+          
+          {/* Video thumbnail */}
+          <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100 shadow-lg w-full max-w-4xl cursor-pointer group"
+               onClick={() => setIsVideoOpen(true)}>
+            <img 
+              src="https://img.youtube.com/vi/QYO7jwvk5X0/maxresdefault.jpg"
+              alt="Clause Demo Video" 
+              className="h-full w-full object-cover"
+            />
+            <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
+              <div className="flex items-center justify-center w-20 h-20 bg-white/90 rounded-full group-hover:bg-white group-hover:scale-110 transition-all">
+                <Play className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" />
+              </div>
+            </div>
+          </div>
         </motion.div>
       </div>
+
+      <VideoModal 
+        isOpen={isVideoOpen}
+        onClose={() => setIsVideoOpen(false)}
+        videoSrc="https://www.youtube.com/embed/QYO7jwvk5X0"
+      />
     </section>
   );
 };
