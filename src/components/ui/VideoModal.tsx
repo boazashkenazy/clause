@@ -63,7 +63,7 @@ const VideoModal: React.FC<VideoModalProps> = ({ isOpen, onClose, videoSrc }) =>
               <iframe
                 src={videoSrc}
                 className="h-full w-full"
-                title="Redline Demo Video"
+                title="Clause Demo Video"
                 frameBorder="0"
                 allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
                 allowFullScreen

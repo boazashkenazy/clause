@@ -12,7 +12,7 @@ const Terms: React.FC = () => {
             <p className="text-gray-600">Last updated: March 2024</p>
             
             <h2 className="mt-8 text-xl font-semibold">1. Acceptance of Terms</h2>
-            <p>By accessing and using Redline's services, you accept and agree to be bound by these Terms and Conditions and our Privacy Policy.</p>
+            <p>By accessing and using Clause's services, you accept and agree to be bound by these Terms and Conditions and our Privacy Policy.</p>
 
             <h2 className="mt-8 text-xl font-semibold">2. Use License</h2>
             <p>We grant you a limited, non-exclusive, non-transferable license to use our services subject to these terms.</p>
@@ -36,7 +36,7 @@ const Terms: React.FC = () => {
 
             <h2 className="mt-8 text-xl font-semibold">7. Contact Information</h2>
             <p>For any questions regarding these terms, please contact us at:</p>
-            <p>Email: redline@augmentedailabs.com</p>
+            <p>Email: info@clause.to</p>
           </div>
         </div>
       </Container>
