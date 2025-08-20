@@ -43,7 +43,7 @@ const Privacy: React.FC = () => {
 
             <h2 className="mt-8 text-xl font-semibold">5. Contact Us</h2>
             <p>If you have any questions about this Privacy Policy, please contact us at:</p>
-            <p>Email: redline@augmentedailabs.com</p>
+            <p>Email: info@clause.to</p>
           </div>
         </div>
       </Container>

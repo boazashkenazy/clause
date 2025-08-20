@@ -10,7 +10,7 @@ const Trust: React.FC = () => {
   });
 
   const testimonial = {
-    quote: "Redline has transformed our document review process. What used to take hours now takes minutes, and the accuracy is remarkable.",
+    quote: "Clause has transformed our document review process. What used to take hours now takes minutes, and the accuracy is remarkable.",
     author: "Sarah Chen",
     role: "General Counsel",
     company: "TechCorp Legal"
@@ -38,8 +38,8 @@ const Trust: React.FC = () => {
                 <div className="md:flex md:items-center md:justify-center">
                   <div className="md:flex-shrink-0">
                     <img
-                      className="mx-auto h-16 w-16 rounded-full"
-                      src="https://images.pexels.com/photos/3796217/pexels-photo-3796217.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
+                      className="mx-auto h-16 w-16 rounded-full object-cover"
+                      src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
                       alt=""
                     />
                   </div>

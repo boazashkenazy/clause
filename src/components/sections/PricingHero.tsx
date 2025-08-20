@@ -14,7 +14,7 @@ const PricingHero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
           >
-            Automated Redlining for Microsoft Word
+            Get Started with Clause AI for Microsoft Word
           </motion.h1>
           <motion.p 
             className="mx-auto mt-6 max-w-2xl text-xl text-gray-600"
@@ -22,7 +22,7 @@ const PricingHero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Stay compliant and save time with AI-powered policy review inside the tools your team already uses.
+            Accelerate your drafting and document revision with AI.
           </motion.p>
           <motion.div 
             className="mt-10"

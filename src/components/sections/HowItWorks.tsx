@@ -32,20 +32,20 @@ const HowItWorks: React.FC = () => {
   const steps: StepProps[] = [
     {
       number: 1,
-      title: "Upload Your Policies",
-      description: "Import your company's editing policies and guidelines directly into Microsoft Word.",
+      title: "Drafting",
+      description: "Drafting mode offers an AI chat for document questions, drafting or revising document language.",
       icon: <Upload size={24} className="stroke-primary-600" />
     },
     {
       number: 2,
-      title: "Run Redline in Word",
-      description: "With a single click, apply your policies to any document you're reviewing.",
+      title: "Policy Review",
+      description: "Policy Review in Clause automatically revises your document to comply with your internal policies",
       icon: <Zap size={24} className="stroke-primary-600" />
     },
     {
       number: 3,
-      title: "Get a Marked-Up Doc Instantly",
-      description: "Review the automatically redlined document and make final adjustments as needed.",
+      title: "Mark-Up Instantly",
+      description: "Review the automatically redlined document and make final adjustments as needed",
       icon: <FileCheck size={24} className="stroke-primary-600" />
     }
   ];
@@ -66,10 +66,10 @@ const HowItWorks: React.FC = () => {
           className="text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            How Redline Works
+            How Clause Works
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Streamline your document review process in just three simple steps.
+            Clause is a Microsoft Word AddIn that you can use alongside any open document
           </p>
         </motion.div>
 

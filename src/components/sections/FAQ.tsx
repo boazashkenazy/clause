@@ -13,28 +13,24 @@ const FAQ: React.FC = () => {
 
   const faqItems: FAQItemProps[] = [
     {
-      question: "What versions of Microsoft Word does Redline support?",
-      answer: "Redline supports Microsoft Word 2016, 2019, Microsoft 365, and later versions on both Windows and macOS platforms."
+      question: "What versions of Microsoft Word does Clause support?",
+      answer: "Clause supports Microsoft Word 2019 Desktop and later versions on both Windows and macOS platforms."
     },
     {
-      question: "Can I customize the redlining rules to match my company's policies?",
-      answer: "Yes, Redline allows you to create, import, and customize redlining rules to match your specific company policies and style guides."
+      question: "What is a credit?",
+      answer: "A credit is equivalent to 1000 AI output tokens or 4000 AI input tokens. For legal prose in English, one word is typically 1.4 AI tokens."
     },
     {
-      question: "Is my document data secure when using Redline?",
-      answer: "Absolutely. Redline processes all documents locally on your machine. Your document content never leaves your computer or gets uploaded to any server, ensuring complete privacy and security."
-    },
-    {
-      question: "How does the licensing work for teams?",
-      answer: "The team license provides access for up to 5 users with shared policy libraries. Each user will receive their own license key for activation. For larger teams, you can purchase multiple team licenses or contact us for enterprise pricing."
+      question: "Is my document data secure when using Clause?",
+      answer: "Clause does not store your Word documents on our servers. We rely on AI foundation models that store processing request data for a maximum of 30 days for legal compliance purposes only, not for model training. Contact us if you require additional information or if you have special data security requirements."
     },
     {
       question: "Can I transfer my license to another computer?",
-      answer: "Yes, you can deactivate Redline on one computer and activate it on another. Individual licenses can be used on up to 2 devices simultaneously for the same user."
+      answer: "Yes, your license is associated with your email address. You can use Clause anywhere that you are signed in with that address."
     },
     {
       question: "Do you offer a trial version?",
-      answer: "Yes, we offer a 14-day free trial with full functionality. No credit card is required to start your trial."
+      answer: "Yes, we offer a 30-day free trial with full functionality. No credit card is required to start your trial."
     }
   ];
 
@@ -52,7 +48,7 @@ const FAQ: React.FC = () => {
             Frequently Asked Questions
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Find answers to common questions about Redline.
+            Find answers to common questions about Clause.
           </p>
         </motion.div>
 

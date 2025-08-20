@@ -43,28 +43,28 @@ const Features: React.FC = () => {
       icon: <Monitor size={20} className="stroke-primary-600" />
     },
     {
-      title: "Custom Policy Libraries",
-      description: "Create and maintain your company's specific editing policies and apply them consistently.",
+      title: "Context Aware",
+      description: "Clause knows exactly which section of the document is selected and responds accordingly",
       icon: <Shield size={20} className="stroke-primary-600" />
     },
     {
-      title: "Works Offline",
-      description: "Full functionality even without an internet connection, perfect for travel or secure environments.",
+      title: "Instant Revisions",
+      description: "Clause makes automatic change-tracked revisions and add comments as directed by the user, or driven by policy review.",
       icon: <Wifi size={20} off={true} className="stroke-primary-600" />
     },
     {
       title: "Private & Secure",
-      description: "Your documents never leave your computer, ensuring complete privacy and security.",
+      description: "Your documents are not stored by Clause, ensuring privacy and security.",
       icon: <Lock size={20} className="stroke-primary-600" />
     },
     {
-      title: "Bulk Document Support",
-      description: "Process multiple documents simultaneously to save time on large projects.",
+      title: "Policy Management and Sharing",
+      description: "Easily create, manage, and share policies for high performance policy review workflows",
       icon: <Layers size={20} className="stroke-primary-600" />
     },
     {
-      title: "Team Collaboration",
-      description: "Share policies across your team to ensure consistent editing standards.",
+      title: "Powerful Drafting Assistant",
+      description: "Ask questions, draft new language, or generate AI driven revisions in Word integrated chat.",
       icon: <Users size={20} className="stroke-primary-600" />
     }
   ];
@@ -80,10 +80,10 @@ const Features: React.FC = () => {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Everything You Need for Efficient Document Review
+            Get done in minutes what used to take hours directly inside Microsoft Word
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Redline combines powerful automation with ease of use to transform your document workflow.
+            Clause combines powerful AI with ease of use to accelerate your contracts and agreements workflow.
           </p>
         </motion.div>
 
