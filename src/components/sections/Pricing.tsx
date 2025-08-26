@@ -87,10 +87,15 @@ const PricingCard: React.FC<PricingCardProps> = ({
       <Button 
         variant={popular ? 'primary' : 'outline'} 
         className="w-full"
-        onClick={cta === "Call Sales Team" ? () => {
-          // Scroll to contact section on current page
-          document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-        } : onPurchase}
+        onClick={
+          cta === "Call Sales Team" ? () => {
+            // Scroll to contact section on current page
+            document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
+          } : cta === "Start Free Trial" || cta === "Get Plus" || cta === "Get Pro" ? () => {
+            // Link to app.clause.to for all subscription plans
+            window.open('https://app.clause.to', '_blank');
+          } : onPurchase
+        }
       >
         {cta}
       </Button>
