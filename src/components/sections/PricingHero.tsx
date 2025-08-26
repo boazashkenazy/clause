@@ -33,7 +33,7 @@ const PricingHero: React.FC = () => {
             <Button 
               variant="primary" 
               size="lg"
-              onClick={() => window.location.href = '#pricing'}
+              onClick={() => window.open('https://app.clause.to', '_blank')}
             >
               Start Free Trial
             </Button>
