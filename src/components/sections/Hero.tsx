@@ -60,9 +60,9 @@ const Hero: React.FC = () => {
             <Button 
               variant="primary" 
               size="lg" 
-              onClick={() => window.open('https://app.clause.to', '_blank')}
+              onClick={() => window.open('https://appsource.microsoft.com/en-us/product/office/WA200009091', '_blank')}
             >
-              Try Clause Now
+              Try Clause Now Free
             </Button>
           </motion.div>
         </div>
