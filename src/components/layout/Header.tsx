@@ -39,8 +39,8 @@ const Header: React.FC = () => {
             <Link to="/" className="text-gray-700 hover:text-primary-600">Home</Link>
             <Link to="/pricing" className="text-gray-700 hover:text-primary-600">Pricing</Link>
             <Link to="/faq" className="text-gray-700 hover:text-primary-600">FAQ</Link>
-            <Button variant="primary" onClick={() => navigate('/pricing')}>
-              Get Started
+            <Button variant="primary" onClick={() => window.open('https://app.clause.to', '_blank')}>
+              Sign In
             </Button>
           </nav>
 
@@ -62,10 +62,10 @@ const Header: React.FC = () => {
               <Link to="/pricing" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Pricing</Link>
               <Link to="/faq" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>FAQ</Link>
               <Button variant="primary" onClick={() => {
-                navigate('/pricing');
+                window.open('https://app.clause.to', '_blank');
                 toggleMenu();
               }}>
-                Get Started
+                Sign In
               </Button>
             </nav>
           </div>

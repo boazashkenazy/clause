@@ -91,8 +91,11 @@ const PricingCard: React.FC<PricingCardProps> = ({
           cta === "Call Sales Team" ? () => {
             // Scroll to contact section on current page
             document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
-          } : cta === "Start Free Trial" || cta === "Get Plus" || cta === "Get Pro" ? () => {
-            // Link to app.clause.to for all subscription plans
+          } : cta === "Try Clause Now Free" ? () => {
+            // Link to Microsoft AppSource for free trial
+            window.open('https://appsource.microsoft.com/en-us/product/office/WA200009091', '_blank');
+          } : cta === "Get Plus" || cta === "Get Pro" ? () => {
+            // Link to app.clause.to for paid subscription plans
             window.open('https://app.clause.to', '_blank');
           } : onPurchase
         }
@@ -124,7 +127,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onPurchase }) => {
         "Full feature access",
         "500 credits"
       ],
-      cta: "Start Free Trial"
+      cta: "Try Clause Now Free"
     },
     {
       title: "Plus",
