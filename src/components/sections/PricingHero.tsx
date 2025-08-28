@@ -33,7 +33,7 @@ const PricingHero: React.FC = () => {
             <Button 
               variant="primary" 
               size="lg"
-              onClick={() => window.open('https://appsource.microsoft.com/en-us/product/office/WA200009091', '_blank')}
+              onClick={() => window.location.href = '/gettingstarted'}
             >
               Try Clause Now Free
             </Button>
