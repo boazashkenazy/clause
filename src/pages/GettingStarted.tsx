@@ -83,7 +83,7 @@ const GettingStarted: React.FC = () => {
               <Button 
                 variant="outline" 
                 size="lg"
-                onClick={() => window.open('/Clause for Word Quick Start No NDA.pdf', '_blank')}
+                onClick={() => window.open('/Clause for Word Quick Start Guide.pdf', '_blank')}
                 className="flex items-center gap-2"
               >
                 <Download size={20} />
@@ -140,7 +140,7 @@ const GettingStarted: React.FC = () => {
                 Try the Policy Review Feature
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Once installed, test Clause's policy review capabilities with our <a href="/Clause for Word Quick Start No NDA.docx" download className="text-primary-600 hover:text-primary-700 underline">example NDA</a>. The add-in will apply "Example - Basic NDA" policies to help you see how Clause can improve your document review process.
+                Once installed, test Clause's policy review capabilities with our <a href="/Clause for Word Quick Start Guide.docx" download className="text-primary-600 hover:text-primary-700 underline">example NDA</a>. The add-in will apply "Example - Basic NDA" policies to help you see how Clause can improve your document review process.
               </p>
               <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200 text-left">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
@@ -150,7 +150,7 @@ const GettingStarted: React.FC = () => {
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">1</span>
-                    <span>Open any Word document or use our <a href="/Clause for Word Quick Start No NDA.docx" download className="text-primary-600 hover:text-primary-700 underline">sample NDA</a></span>
+                    <span>Open any Word document or use our <a href="/Clause for Word Quick Start Guide.docx" download className="text-primary-600 hover:text-primary-700 underline">sample NDA</a></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">2</span>
