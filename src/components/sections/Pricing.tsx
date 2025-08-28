@@ -92,8 +92,8 @@ const PricingCard: React.FC<PricingCardProps> = ({
             // Scroll to contact section on current page
             document.getElementById('contact')?.scrollIntoView({ behavior: 'smooth' });
           } : cta === "Try Clause Now Free" ? () => {
-            // Link to Microsoft AppSource for free trial
-            window.open('https://appsource.microsoft.com/en-us/product/office/WA200009091', '_blank');
+            // Redirect to Getting Started page
+            window.location.href = '/gettingstarted';
           } : cta === "Get Plus" || cta === "Get Pro" ? () => {
             // Link to app.clause.to for paid subscription plans
             window.open('https://app.clause.to', '_blank');
