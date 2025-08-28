@@ -38,6 +38,7 @@ const Header: React.FC = () => {
           <nav className="hidden items-center space-x-8 md:flex">
             <Link to="/" className="text-gray-700 hover:text-primary-600">Home</Link>
             <Link to="/pricing" className="text-gray-700 hover:text-primary-600">Pricing</Link>
+            <Link to="/gettingstarted" className="text-gray-700 hover:text-primary-600">Getting Started</Link>
             <Link to="/faq" className="text-gray-700 hover:text-primary-600">FAQ</Link>
             <Button variant="primary" onClick={() => window.open('https://app.clause.to', '_blank')}>
               Sign In
@@ -60,6 +61,7 @@ const Header: React.FC = () => {
             <nav className="flex flex-col space-y-4">
               <Link to="/" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Home</Link>
               <Link to="/pricing" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Pricing</Link>
+              <Link to="/gettingstarted" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Getting Started</Link>
               <Link to="/faq" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>FAQ</Link>
               <Button variant="primary" onClick={() => {
                 window.open('https://app.clause.to', '_blank');
