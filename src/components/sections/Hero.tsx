@@ -93,7 +93,7 @@ const Hero: React.FC = () => {
           <div className="mb-4">
             <img 
               src="/images/clause-word.png"
-              alt="Document to Microsoft Word integration" 
+              alt="Clause AI integration with Microsoft Word for legal document review" 
               className="h-[10rem]"
             />
           </div>
@@ -120,7 +120,7 @@ const Hero: React.FC = () => {
               <div className="relative cursor-pointer group h-full w-full" onClick={toggleVideo}>
                 <img 
                   src="/images/clause-screencapture.jpg"
-                  alt="Clause Demo Video" 
+                  alt="Clause AI demo video showing policy review and document analysis in Microsoft Word" 
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">

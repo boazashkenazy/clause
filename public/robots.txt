@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Sitemap
+Sitemap: https://clause.to/sitemap.xml
+
+# Disallow sensitive pages
+Disallow: /checkout
+
+# Allow important pages
+Allow: /
+Allow: /pricing
+Allow: /gettingstarted
+Allow: /faq
+Allow: /privacy
+Allow: /terms
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
