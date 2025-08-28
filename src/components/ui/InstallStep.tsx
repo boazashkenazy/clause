@@ -51,8 +51,9 @@ const InstallStep: React.FC<InstallStepProps> = ({
           <div className="rounded-lg border border-gray-200 overflow-hidden shadow-sm">
             <img 
               src={screenshot}
-              alt={`Step ${step} screenshot`}
-              className="w-full h-auto"
+              alt={`Step ${step} screenshot: ${title}. ${description}`}
+              className="w-full h-auto max-w-2xl mx-auto"
+              loading="lazy"
             />
           </div>
         )}

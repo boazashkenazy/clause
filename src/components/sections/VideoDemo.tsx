@@ -81,7 +81,7 @@ const VideoDemo: React.FC = () => {
               <div className="relative cursor-pointer group h-full w-full" onClick={toggleVideo}>
                 <img 
                   src="/images/clause-screencapture.jpg"
-                  alt="Clause Demo Video" 
+                  alt="Interactive demo of Clause AI analyzing legal documents with policy review in Microsoft Word" 
                   className="h-full w-full object-cover"
                 />
                 <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">

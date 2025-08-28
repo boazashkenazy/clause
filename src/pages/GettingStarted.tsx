@@ -5,6 +5,7 @@ import InstallStep from '../components/ui/InstallStep';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Download, ExternalLink, HelpCircle } from 'lucide-react';
+import useSEO from '../hooks/useSEO';
 
 const GettingStarted: React.FC = () => {
   const [ref, inView] = useInView({
@@ -12,31 +13,43 @@ const GettingStarted: React.FC = () => {
     threshold: 0.1,
   });
 
+  useSEO({
+    title: 'Getting Started - How to Install Clause for Microsoft Word',
+    description: 'Learn how to install and set up Clause for Microsoft Word in 5 simple steps. Complete installation guide with screenshots and troubleshooting tips.',
+    keywords: 'install Clause Word add-in, Microsoft Word legal add-in setup, how to install Clause AI, Word add-in installation guide, legal document software setup',
+    canonical: 'https://clause.to/gettingstarted'
+  });
+
   const installationSteps = [
     {
       step: 1,
       title: "Click Home → Add-ins in the MS Word task ribbon",
-      description: "Open Microsoft Word and navigate to the Home tab in the ribbon. Look for the Add-ins button and click it to open the add-ins panel."
+      description: "Open Microsoft Word and navigate to the Home tab in the ribbon. Look for the Add-ins button and click it to open the add-ins panel.",
+      screenshot: "/images/step1-word-addins-ribbon.png"
     },
     {
       step: 2,
       title: 'Click the "More Add-ins" button',
-      description: "In the add-ins panel that opens, you'll see a 'More Add-ins' button. Click this to access the Office Add-ins store where you can find Clause."
+      description: "In the add-ins panel that opens, you'll see a 'More Add-ins' button. Click this to access the Office Add-ins store where you can find Clause.",
+      screenshot: "/images/step2-more-addins-button.png"
     },
     {
       step: 3,
       title: 'Search for "Clause AI" and click the "Add" button',
-      description: "In the Office Add-ins store, use the search box to look for 'Clause AI'. When you find it in the search results, click the 'Add' button to install the Clause for Word Add-in."
+      description: "In the Office Add-ins store, use the search box to look for 'Clause AI'. When you find it in the search results, click the 'Add' button to install the Clause for Word Add-in.",
+      screenshot: "/images/step3-office-store-search.png"
     },
     {
       step: 4,
       title: 'Switch to "Reviewing" mode',
-      description: "After installation, you'll see the Clause panel alongside your document. Switch Word to 'Reviewing' mode to enable track changes, which Clause uses to show its suggestions and edits."
+      description: "After installation, you'll see the Clause panel alongside your document. Switch Word to 'Reviewing' mode to enable track changes, which Clause uses to show its suggestions and edits.",
+      screenshot: "/images/step4-reviewing-mode.png"
     },
     {
       step: 5,
       title: 'Select the Policy Review tab and click the play button',
-      description: "In the Clause add-in panel, click on the 'Policy Review' tab. You'll see a play button - click it to run Clause's policy review on your document using the example policies."
+      description: "In the Clause add-in panel, click on the 'Policy Review' tab. You'll see a play button - click it to run Clause's policy review on your document using the example policies.",
+      screenshot: "/images/step5-clause-panel.png"
     }
   ];
 
@@ -106,6 +119,7 @@ const GettingStarted: React.FC = () => {
                 step={step.step}
                 title={step.title}
                 description={step.description}
+                screenshot={step.screenshot}
                 index={index}
               />
             ))}
@@ -126,7 +140,7 @@ const GettingStarted: React.FC = () => {
                 Try the Policy Review Feature
               </h2>
               <p className="text-lg text-gray-600 mb-8">
-                Once installed, test Clause's policy review capabilities with our example NDA. The add-in will apply "Example - Basic NDA" policies to help you see how Clause can improve your document review process.
+                Once installed, test Clause's policy review capabilities with our <a href="/Clause for Word Quick Start No NDA.docx" download className="text-primary-600 hover:text-primary-700 underline">example NDA</a>. The add-in will apply "Example - Basic NDA" policies to help you see how Clause can improve your document review process.
               </p>
               <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200 text-left">
                 <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
@@ -136,7 +150,7 @@ const GettingStarted: React.FC = () => {
                 <ul className="space-y-3 text-gray-600">
                   <li className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">1</span>
-                    <span>Open any Word document or use our sample NDA</span>
+                    <span>Open any Word document or use our <a href="/Clause for Word Quick Start No NDA.docx" download className="text-primary-600 hover:text-primary-700 underline">sample NDA</a></span>
                   </li>
                   <li className="flex items-start gap-3">
                     <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">2</span>

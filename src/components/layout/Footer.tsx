@@ -38,7 +38,7 @@ const Footer: React.FC = () => {
           <div>
             <h4 className="font-medium text-gray-900">Support</h4>
             <ul className="mt-4 space-y-2">
-              <li><Link to="/" onClick={() => scrollToSection('video-demo')} className="text-gray-600 hover:text-primary-600">Documentation</Link></li>
+              <li><Link to="/gettingstarted" className="text-gray-600 hover:text-primary-600">Documentation</Link></li>
               <li><Link to="/terms" className="text-gray-600 hover:text-primary-600">Terms & Conditions</Link></li>
               <li><Link to="/privacy" className="text-gray-600 hover:text-primary-600">Privacy Policy</Link></li>
               <li>

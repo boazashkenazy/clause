@@ -9,6 +9,7 @@ import Checkout from './pages/Checkout';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import GettingStarted from './pages/GettingStarted';
+import NotFound from './pages/NotFound';
 import { useEffect } from 'react';
 
 function ScrollToTop() {
@@ -37,6 +38,7 @@ function App() {
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         
