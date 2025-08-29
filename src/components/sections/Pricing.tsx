@@ -126,8 +126,7 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onPurchase }) => {
       price: { monthly: 0, yearly: 0 },
       description: "No credit card required.",
       features: [
-        "30-day free trial",
-        "Full feature access",
+        "Clause for Word",
         "500 credits"
       ],
       cta: "Try Clause Now Free"
@@ -137,9 +136,9 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onPurchase }) => {
       price: { monthly: 30, yearly: 306 },
       description: "Perfect for individuals.",
       features: [
+        "Clause for Word",
         "Priority support",
-        "Full feature access",
-        "2000 credits/month"
+        "2,000 credits/month"
       ],
       cta: "Get Plus",
       popular: true
@@ -149,8 +148,9 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onPurchase }) => {
       price: { monthly: 150, yearly: 1530 },
       description: "Ideal for power users.",
       features: [
+        "Clause for Word",
+        "Clause for Web",
         "Premium support",
-        "Full feature access",
         "10,000 credits/month"
       ],
       cta: "Get Pro"
@@ -160,10 +160,12 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onPurchase }) => {
       price: null,
       description: "For large organizations.",
       features: [
-        "Teams",
-        "Custom integrations",
-        "Dedicated account manager + support",
+        "Clause for Word",
+        "Clause for Web",
         "Premium support",
+        "Dedicated account manager + support",
+        "Teams and sharing",
+        "Custom integrations",
         "Custom training and onboarding"
       ],
       cta: "Call Sales Team"
