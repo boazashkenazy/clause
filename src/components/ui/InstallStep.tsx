@@ -5,7 +5,7 @@ import { useInView } from 'react-intersection-observer';
 interface InstallStepProps {
   step: number;
   title: string;
-  description: string;
+  description: string | React.ReactNode;
   screenshot?: string;
   index: number;
 }
@@ -51,7 +51,7 @@ const InstallStep: React.FC<InstallStepProps> = ({
           <div className="rounded-lg border border-gray-200 overflow-hidden shadow-sm">
             <img 
               src={screenshot}
-              alt={`Step ${step} screenshot: ${title}. ${description}`}
+              alt={`Step ${step} screenshot: ${title}`}
               className="w-full h-auto max-w-2xl mx-auto"
               loading="lazy"
             />
