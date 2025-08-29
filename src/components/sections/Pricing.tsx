@@ -94,9 +94,12 @@ const PricingCard: React.FC<PricingCardProps> = ({
           } : cta === "Try Clause Now Free" ? () => {
             // Redirect to Getting Started page
             window.location.href = '/gettingstarted';
-          } : cta === "Get Plus" || cta === "Get Pro" ? () => {
-            // Link to app.clause.to for paid subscription plans
-            window.open('https://app.clause.to', '_blank');
+          } : cta === "Get Plus" ? () => {
+            // Link to Plus plan settings
+            window.open('https://app.clause.to/portal/settings?plan=plus', '_blank');
+          } : cta === "Get Pro" ? () => {
+            // Link to Pro plan settings
+            window.open('https://app.clause.to/portal/settings?plan=pro', '_blank');
           } : onPurchase
         }
       >
