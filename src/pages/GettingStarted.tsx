@@ -4,7 +4,7 @@ import Button from '../components/ui/Button';
 import InstallStep from '../components/ui/InstallStep';
 import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
-import { Download, ExternalLink, HelpCircle } from 'lucide-react';
+import { ExternalLink } from 'lucide-react';
 import useSEO from '../hooks/useSEO';
 
 const GettingStarted: React.FC = () => {
@@ -48,7 +48,11 @@ const GettingStarted: React.FC = () => {
     {
       step: 5,
       title: 'Select the Policy Review tab and click the play button',
-      description: "In the Clause add-in panel, click on the 'Policy Review' tab. You'll see a play button - click it to run Clause's policy review on your document using the example policies.",
+      description: (
+        <>
+          Download our <a href="/Clause for Word Quick Start Guide.docx" download className="text-primary-600 hover:text-primary-700 underline">Sample NDA Doc</a> and open it inside Word. In the Clause add-in panel, click on the 'Policy Review' tab. Below the Policy Review tab you'll see a play button - click it to run Clause's policy review on the sample document using the example policies.
+        </>
+      ),
       screenshot: "/images/step5-clause-panel.png"
     }
   ];
@@ -70,26 +74,6 @@ const GettingStarted: React.FC = () => {
             <p className="text-xl text-gray-600 mb-8">
               Install and set up Clause in just 5 simple steps. Start reviewing documents with AI-powered policy analysis in minutes.
             </p>
-            <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-              <Button 
-                variant="primary" 
-                size="lg"
-                onClick={() => window.open('https://appsource.microsoft.com/en-us/product/office/WA200009091', '_blank')}
-                className="flex items-center gap-2"
-              >
-                <ExternalLink size={20} />
-                Install from Microsoft AppSource
-              </Button>
-              <Button 
-                variant="outline" 
-                size="lg"
-                onClick={() => window.open('/Clause for Word Quick Start Guide.pdf', '_blank')}
-                className="flex items-center gap-2"
-              >
-                <Download size={20} />
-                Download PDF Guide
-              </Button>
-            </div>
           </motion.div>
         </Container>
       </section>
@@ -127,49 +111,6 @@ const GettingStarted: React.FC = () => {
         </Container>
       </section>
 
-      {/* Try the Demo */}
-      <section className="py-20 bg-gray-50">
-        <Container>
-          <div className="mx-auto max-w-4xl text-center">
-            <motion.div 
-              initial={{ opacity: 0, y: 20 }}
-              animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            >
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-6">
-                Try the Policy Review Feature
-              </h2>
-              <p className="text-lg text-gray-600 mb-8">
-                Once installed, test Clause's policy review capabilities with our <a href="/Clause for Word Quick Start Guide.docx" download className="text-primary-600 hover:text-primary-700 underline">example NDA</a>. The add-in will apply "Example - Basic NDA" policies to help you see how Clause can improve your document review process.
-              </p>
-              <div className="bg-white rounded-xl p-8 shadow-sm border border-gray-200 text-left">
-                <h3 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
-                  <HelpCircle size={20} className="text-primary-600" />
-                  Quick Tutorial
-                </h3>
-                <ul className="space-y-3 text-gray-600">
-                  <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">1</span>
-                    <span>Open any Word document or use our <a href="/Clause for Word Quick Start Guide.docx" download className="text-primary-600 hover:text-primary-700 underline">sample NDA</a></span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">2</span>
-                    <span>Select the "Policy Review" tab in the Clause panel</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">3</span>
-                    <span>Click the play button to run policy analysis</span>
-                  </li>
-                  <li className="flex items-start gap-3">
-                    <span className="flex-shrink-0 w-6 h-6 bg-primary-100 text-primary-600 rounded-full flex items-center justify-center text-sm font-medium">4</span>
-                    <span>Review the AI-generated suggestions and track changes</span>
-                  </li>
-                </ul>
-              </div>
-            </motion.div>
-          </div>
-        </Container>
-      </section>
 
       {/* Troubleshooting */}
       <section className="py-20 bg-white">
