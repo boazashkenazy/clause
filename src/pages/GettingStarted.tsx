@@ -50,7 +50,7 @@ const GettingStarted: React.FC = () => {
       title: 'Select the Policy Review tab and click the play button',
       description: (
         <>
-          Download our <a href="/Clause for Word Quick Start Guide.docx" download className="text-primary-600 hover:text-primary-700 underline">Sample NDA Doc</a> and open it inside Word. In the Clause add-in panel, click on the 'Policy Review' tab. Below the Policy Review tab you'll see a play button - click it to run Clause's policy review on the sample document using the example policies.
+          Download our <a href="/Clause-Example-NDA.docx" download className="text-primary-600 hover:text-primary-700 underline">Sample NDA Doc</a> and open it inside Word. In the Clause add-in panel, click on the 'Policy Review' tab. Below the Policy Review tab you'll see a play button - click it to run Clause's policy review on the sample document using the example policies.
         </>
       ),
       screenshot: "/images/step5-clause-panel.png"
