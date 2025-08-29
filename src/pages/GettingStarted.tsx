@@ -74,12 +74,20 @@ const GettingStarted: React.FC = () => {
             <p className="text-xl text-gray-600 mb-8">
               Install and set up Clause in just 5 simple steps. Start reviewing documents with AI-powered policy analysis in minutes.
             </p>
+            <motion.img 
+              src="/images/clause-word.png" 
+              alt="Clause for Microsoft Word" 
+              className="mx-auto max-w-xs h-auto"
+              initial={{ opacity: 0, y: 20 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            />
           </motion.div>
         </Container>
       </section>
 
       {/* Installation Steps */}
-      <section className="py-20 bg-white">
+      <section className="py-12 bg-white">
         <Container>
           <motion.div 
             ref={ref}
