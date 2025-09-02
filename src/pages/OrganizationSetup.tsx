@@ -159,7 +159,7 @@ const OrganizationSetup: React.FC = () => {
               <div className="bg-white rounded-xl p-6 shadow-sm border">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Need Support?</h3>
                 <p className="text-gray-600 text-sm">
-                  Contact our admin support team at <a href="mailto:admin@clause.to" className="text-primary-600 hover:text-primary-700 underline">admin@clause.to</a> for deployment assistance or enterprise questions.
+                  Contact our admin support team at <a href="mailto:support@clause.to" className="text-primary-600 hover:text-primary-700 underline">support@clause.to</a> for deployment assistance or enterprise questions.
                 </p>
               </div>
             </div>
