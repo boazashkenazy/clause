@@ -7,53 +7,47 @@ import { useInView } from 'react-intersection-observer';
 import { ExternalLink } from 'lucide-react';
 import useSEO from '../hooks/useSEO';
 
-const GettingStarted: React.FC = () => {
+const OrganizationSetup: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
   });
 
   useSEO({
-    title: 'Getting Started - How to Install Clause for Microsoft Word',
-    description: 'Learn how to install and set up Clause for Microsoft Word in 5 simple steps. Complete installation guide with screenshots and troubleshooting tips.',
-    keywords: 'install Clause Word add-in, Microsoft Word legal add-in setup, how to install Clause AI, Word add-in installation guide, legal document software setup',
-    canonical: 'https://clause.to/gettingstarted'
+    title: 'Organization Setup - Deploy Clause for Microsoft Word to Your Organization',
+    description: 'Learn how to deploy Clause for Microsoft Word across your organization in 4 simple steps. Complete admin guide for Microsoft 365 administrators.',
+    keywords: 'deploy Clause Word add-in organization, Microsoft 365 admin deployment, enterprise Word add-in setup, admin install Clause AI, organization policy management',
+    canonical: 'https://clause.to/organization-setup'
   });
 
   const installationSteps = [
     {
       step: 1,
-      title: "Click Home → Add-ins in the MS Word task ribbon",
-      description: "Open Microsoft Word and navigate to the Home tab in the ribbon. Look for the Add-ins button and click it to open the add-ins panel.",
-      screenshot: "/images/step1-word-addins-ribbon.png"
+      title: "Navigate to Microsoft 365 Admin Center",
+      description: (
+        <>
+          Navigate to <a href="https://admin.microsoft.com" target="_blank" rel="noopener noreferrer" className="text-blue-600 hover:text-blue-700 font-semibold underline">admin.microsoft.com</a> and select <strong>Settings → Integrated apps → Add-ins</strong>. Note: You must be signed in as a Global admin or Exchange admin to access the Microsoft 365 admin center.
+        </>
+      ),
+      screenshot: "/images/clause-org-guide-1.png"
     },
     {
       step: 2,
-      title: 'Click the "More Add-ins" button',
-      description: "In the add-ins panel that opens, you'll see a 'More Add-ins' button. Click this to access the Office Add-ins store where you can find Clause.",
-      screenshot: "/images/step2-more-addins-button.png"
+      title: 'Deploy Add-in from Microsoft Store',
+      description: "Select the '+ Deploy Add-in' button, then choose 'Next' and select 'Choose from the Store' to access Microsoft's add-in marketplace.",
+      screenshot: "/images/clause-org-guide-2.png"
     },
     {
       step: 3,
-      title: 'Search for "Clause AI" and click the "Add" button',
-      description: "In the Office Add-ins store, use the search box to look for 'Clause AI'. When you find it in the search results, click the 'Add' button to install the Clause for Word Add-in.",
-      screenshot: "/images/step3-office-store-search.png"
+      title: 'Search for Clause AI and Add',
+      description: "In the Microsoft Store, search for 'Clause AI' in the search box. When you find Clause AI for Word in the search results, click the 'Add' button to begin the deployment process.",
+      screenshot: "/images/clause-org-guide-3.png"
     },
     {
       step: 4,
-      title: 'Switch to "Reviewing" mode',
-      description: "After installation, you'll see the Clause panel alongside your document. Switch Word to 'Reviewing' mode to enable track changes, which Clause uses to show its suggestions and edits.",
-      screenshot: "/images/step4-reviewing-mode.png"
-    },
-    {
-      step: 5,
-      title: 'Try the Policy Review skill',
-      description: (
-        <>
-          Download our <a href="/Clause-Example-NDA.docx" download className="text-blue-600 hover:text-blue-700 font-semibold underline">Sample NDA Doc</a> and open it inside Word. In the Clause add-in panel, click on the 'Policy Review' tab. Below the Policy Review tab you'll see a play button - click it to run Clause's policy review on the sample document using the example policies.
-        </>
-      ),
-      screenshot: "/images/step5-clause-panel.png"
+      title: 'Complete Deployment',
+      description: "You've successfully deployed the Clause Word Add-in to your organization! Users will need to restart their Microsoft Word Desktop app to see the Clause Add-in appear in their ribbon. They can then access Clause from the Home tab in Word.",
+      screenshot: "/images/clause-org-guide-4.png"
     }
   ];
 
@@ -69,19 +63,16 @@ const GettingStarted: React.FC = () => {
             transition={{ duration: 0.6 }}
           >
             <h1 className="text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl mb-6">
-              Get Started with Clause for Microsoft Word
+              Deploy Clause for Microsoft Word to Your Organization
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Install and set up Clause in just 5 simple steps. Start reviewing documents with AI-powered policy analysis in minutes.
+              Administrators can deploy Clause across their organization in just 4 simple steps using the Microsoft 365 admin center.
             </p>
-            <motion.img 
-              src="/images/clause-word.png" 
-              alt="Clause for Microsoft Word" 
-              className="mx-auto max-w-xs h-auto"
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
-            />
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
+              <p className="text-blue-800 font-medium">
+                <strong>Admin Requirements:</strong> You must be signed in as a Global admin or Exchange admin to deploy organization-wide add-ins.
+              </p>
+            </div>
           </motion.div>
         </Container>
       </section>
@@ -98,10 +89,10 @@ const GettingStarted: React.FC = () => {
           >
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
-                Installation Steps
+                Deployment Steps
               </h2>
               <p className="text-lg text-gray-600">
-                Follow these simple steps to install and start using Clause in Microsoft Word
+                Follow these simple steps to deploy Clause to your entire organization
               </p>
             </div>
 
@@ -119,9 +110,8 @@ const GettingStarted: React.FC = () => {
         </Container>
       </section>
 
-
-      {/* Troubleshooting */}
-      <section className="py-20 bg-white">
+      {/* Post-Deployment */}
+      <section className="py-20 bg-gray-50">
         <Container>
           <div className="mx-auto max-w-4xl">
             <motion.div 
@@ -131,39 +121,45 @@ const GettingStarted: React.FC = () => {
               className="text-center mb-12"
             >
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
-                Troubleshooting
+                After Deployment
               </h2>
               <p className="text-lg text-gray-600">
-                Having issues with installation? Here are some common solutions.
+                What your users need to know to start using Clause.
               </p>
             </motion.div>
 
             <div className="grid gap-6 md:grid-cols-2">
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Can't find Clause AI in the store?</h3>
+              <div className="bg-white rounded-xl p-6 shadow-sm border">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">For End Users</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  After deployment, users will need to restart Microsoft Word to see the Clause add-in. They can find Clause in the Home tab of the Word ribbon.
+                </p>
                 <p className="text-gray-600 text-sm">
-                  Make sure you're searching for "Clause AI" exactly. You can also try searching just "Clause" or visit the Microsoft AppSource directly using our install link above.
+                  Users will need to sign in with their Clause account to start using the add-in's features.
                 </p>
               </div>
               
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Add-in not appearing after install?</h3>
+              <div className="bg-white rounded-xl p-6 shadow-sm border">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Managing Deployment</h3>
+                <p className="text-gray-600 text-sm mb-4">
+                  You can manage the add-in deployment, update settings, or remove it from the same Integrated apps section in the admin center.
+                </p>
                 <p className="text-gray-600 text-sm">
-                  Try restarting Microsoft Word. If the issue persists, check that your Office version is up to date and supports add-ins.
+                  The add-in will automatically update for all users when new versions are released.
                 </p>
               </div>
               
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Need help with your account?</h3>
+              <div className="bg-white rounded-xl p-6 shadow-sm border">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">User Training</h3>
                 <p className="text-gray-600 text-sm">
-                  Visit <a href="https://app.clause.to" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700">app.clause.to</a> to sign in or create your account and manage your subscription.
+                  Direct your users to our <a href="/gettingstarted" className="text-primary-600 hover:text-primary-700 underline">individual setup guide</a> for step-by-step instructions on how to use Clause features in Word.
                 </p>
               </div>
               
-              <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Still need help?</h3>
+              <div className="bg-white rounded-xl p-6 shadow-sm border">
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Need Support?</h3>
                 <p className="text-gray-600 text-sm">
-                  Contact our support team at <a href="mailto:info@clause.to" className="text-primary-600 hover:text-primary-700">info@clause.to</a> and we'll help you get set up.
+                  Contact our admin support team at <a href="mailto:admin@clause.to" className="text-primary-600 hover:text-primary-700 underline">admin@clause.to</a> for deployment assistance or enterprise questions.
                 </p>
               </div>
             </div>
@@ -181,10 +177,10 @@ const GettingStarted: React.FC = () => {
               transition={{ duration: 0.6, delay: 0.4 }}
             >
               <h2 className="text-3xl font-bold mb-6">
-                Ready to Transform Your Document Review?
+                Successfully Deployed Clause?
               </h2>
               <p className="text-xl text-primary-100 mb-8">
-                Now that you have Clause installed, explore all the features available to streamline your legal document workflow.
+                Your organization now has access to AI-powered legal document review and drafting capabilities directly in Microsoft Word.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
                 <Button 
@@ -209,7 +205,7 @@ const GettingStarted: React.FC = () => {
                   }}
                   className="border-white text-white hover:bg-primary-700"
                 >
-                  Contact Support
+                  Contact Admin Support
                 </Button>
               </div>
             </motion.div>
@@ -220,4 +216,4 @@ const GettingStarted: React.FC = () => {
   );
 };
 
-export default GettingStarted;
+export default OrganizationSetup;
