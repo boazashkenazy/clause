@@ -9,6 +9,7 @@ import Checkout from './pages/Checkout';
 import Privacy from './pages/Privacy';
 import Terms from './pages/Terms';
 import GettingStarted from './pages/GettingStarted';
+import OrganizationSetup from './pages/OrganizationSetup';
 import NotFound from './pages/NotFound';
 import { useEffect } from 'react';
 
@@ -35,6 +36,7 @@ function App() {
             <Route path="/pricing" element={<Pricing />} />
             <Route path="/faq" element={<FAQ />} />
             <Route path="/gettingstarted" element={<GettingStarted />} />
+            <Route path="/organization-setup" element={<OrganizationSetup />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />

@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from 'react';
-import { Menu, X } from 'lucide-react';
+import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
@@ -7,6 +7,7 @@ import Button from '../ui/Button';
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   const [isScrolled, setIsScrolled] = useState(false);
+  const [isGettingStartedOpen, setIsGettingStartedOpen] = useState(false);
   const navigate = useNavigate();
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
@@ -38,7 +39,42 @@ const Header: React.FC = () => {
           <nav className="hidden items-center space-x-8 md:flex">
             <Link to="/" className="text-gray-700 hover:text-primary-600">Home</Link>
             <Link to="/pricing" className="text-gray-700 hover:text-primary-600">Pricing</Link>
-            <Link to="/gettingstarted" className="text-gray-700 hover:text-primary-600">Getting Started</Link>
+            
+            {/* Getting Started Dropdown */}
+            <div 
+              className="relative"
+              onMouseEnter={() => setIsGettingStartedOpen(true)}
+              onMouseLeave={() => setIsGettingStartedOpen(false)}
+            >
+              <button
+                className="flex items-center space-x-1 text-gray-700 hover:text-primary-600"
+              >
+                <span>Getting Started</span>
+                <ChevronDown size={16} className={`transform transition-transform ${isGettingStartedOpen ? 'rotate-180' : ''}`} />
+              </button>
+              
+              {isGettingStartedOpen && (
+                <div 
+                  className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50"
+                >
+                  <Link 
+                    to="/gettingstarted" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                  >
+                    Individual Setup
+                    <p className="text-xs text-gray-500 mt-1">Install Clause in your Word</p>
+                  </Link>
+                  <Link 
+                    to="/organization-setup" 
+                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                  >
+                    Organization Setup
+                    <p className="text-xs text-gray-500 mt-1">Deploy Clause across your org</p>
+                  </Link>
+                </div>
+              )}
+            </div>
+            
             <Link to="/faq" className="text-gray-700 hover:text-primary-600">FAQ</Link>
             <Button variant="primary" onClick={() => window.open('https://app.clause.to', '_blank')}>
               Sign In
@@ -61,7 +97,20 @@ const Header: React.FC = () => {
             <nav className="flex flex-col space-y-4">
               <Link to="/" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Home</Link>
               <Link to="/pricing" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Pricing</Link>
-              <Link to="/gettingstarted" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Getting Started</Link>
+              
+              {/* Mobile Getting Started Section */}
+              <div className="border-l-2 border-primary-600 pl-3">
+                <p className="text-sm font-medium text-gray-900 mb-2">Getting Started</p>
+                <div className="space-y-2">
+                  <Link to="/gettingstarted" className="block text-sm text-gray-600 hover:text-primary-600" onClick={toggleMenu}>
+                    Individual Setup
+                  </Link>
+                  <Link to="/organization-setup" className="block text-sm text-gray-600 hover:text-primary-600" onClick={toggleMenu}>
+                    Organization Setup
+                  </Link>
+                </div>
+              </div>
+              
               <Link to="/faq" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>FAQ</Link>
               <Button variant="primary" onClick={() => {
                 window.open('https://app.clause.to', '_blank');
