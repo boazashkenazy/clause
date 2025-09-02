@@ -9,8 +9,21 @@ const Header: React.FC = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isGettingStartedOpen, setIsGettingStartedOpen] = useState(false);
   const navigate = useNavigate();
+  
+  let dropdownTimeout: NodeJS.Timeout;
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  
+  const handleDropdownEnter = () => {
+    clearTimeout(dropdownTimeout);
+    setIsGettingStartedOpen(true);
+  };
+  
+  const handleDropdownLeave = () => {
+    dropdownTimeout = setTimeout(() => {
+      setIsGettingStartedOpen(false);
+    }, 100);
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -43,11 +56,11 @@ const Header: React.FC = () => {
             {/* Getting Started Dropdown */}
             <div 
               className="relative"
-              onMouseEnter={() => setIsGettingStartedOpen(true)}
-              onMouseLeave={() => setIsGettingStartedOpen(false)}
+              onMouseEnter={handleDropdownEnter}
+              onMouseLeave={handleDropdownLeave}
             >
               <button
-                className="flex items-center space-x-1 text-gray-700 hover:text-primary-600"
+                className="flex items-center space-x-1 text-gray-700 hover:text-primary-600 py-2"
               >
                 <span>Getting Started</span>
                 <ChevronDown size={16} className={`transform transition-transform ${isGettingStartedOpen ? 'rotate-180' : ''}`} />
@@ -55,22 +68,24 @@ const Header: React.FC = () => {
               
               {isGettingStartedOpen && (
                 <div 
-                  className="absolute top-full left-0 mt-1 w-56 bg-white rounded-md shadow-lg border border-gray-200 py-2 z-50"
+                  className="absolute top-full left-0 pt-1 w-56 z-50"
                 >
-                  <Link 
-                    to="/gettingstarted" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600"
-                  >
-                    Individual Setup
-                    <p className="text-xs text-gray-500 mt-1">Install Clause in your Word</p>
-                  </Link>
-                  <Link 
-                    to="/organization-setup" 
-                    className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600"
-                  >
-                    Organization Setup
-                    <p className="text-xs text-gray-500 mt-1">Deploy Clause across your org</p>
-                  </Link>
+                  <div className="bg-white rounded-md shadow-lg border border-gray-200 py-2">
+                    <Link 
+                      to="/gettingstarted" 
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                    >
+                      Individual Setup
+                      <p className="text-xs text-gray-500 mt-1">Install Clause in your Word</p>
+                    </Link>
+                    <Link 
+                      to="/organization-setup" 
+                      className="block px-4 py-2 text-sm text-gray-700 hover:bg-gray-50 hover:text-primary-600"
+                    >
+                      Organization Setup
+                      <p className="text-xs text-gray-500 mt-1">Deploy Clause across your org</p>
+                    </Link>
+                  </div>
                 </div>
               )}
             </div>
