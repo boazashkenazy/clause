@@ -41,18 +41,18 @@ const GettingStarted: React.FC = () => {
     },
     {
       step: 4,
-      title: 'Switch to "Reviewing" mode',
-      description: "After installation, you'll see the Clause panel alongside your document. Switch Word to 'Reviewing' mode to enable track changes, which Clause uses to show its suggestions and edits.",
+      title: 'Launch Clause with Sample Document',
+      description: (
+        <>
+          Download our <a href="/Clause-Example-NDA.docx" download className="text-blue-600 hover:text-blue-700 font-semibold underline">Sample NDA Doc</a> and open it inside Word. After opening the sample doc, you'll see the Clause logo in the ribbon. Click the logo to open Clause and sign in. Switch Word to 'Reviewing' mode to enable track changes, which Clause uses to show its revisions.
+        </>
+      ),
       screenshot: "/images/step4-reviewing-mode.png"
     },
     {
       step: 5,
       title: 'Try the Policy Review skill',
-      description: (
-        <>
-          Download our <a href="/Clause-Example-NDA.docx" download className="text-blue-600 hover:text-blue-700 font-semibold underline">Sample NDA Doc</a> and open it inside Word. In the Clause add-in panel, click on the 'Policy Review' tab. Below the Policy Review tab you'll see a play button - click it to run Clause's policy review on the sample document using the example policies.
-        </>
-      ),
+      description: "Click on the 'Policy Review' tab in the Clause panel. Below the Policy Review tab you'll see a play button - click it to run Clause's policy review on the sample document using the example policies.",
       screenshot: "/images/step5-clause-panel.png"
     }
   ];
