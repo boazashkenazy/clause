@@ -9,7 +9,7 @@ const Privacy: React.FC = () => {
           <h1 className="mb-8 text-3xl font-bold">Privacy Policy</h1>
           
           <div className="prose prose-lg">
-            <p className="text-gray-600">Last updated: September 2025</p>
+            <p className="text-gray-600">Last updated: September 17 2025</p>
             
             <p className="mt-6">This Privacy Policy applies to all our services, including any new, additional, or complementary services we may offer, unless stated otherwise. All current and future offerings are covered by this policy unless expressly excluded.</p>
             
@@ -32,7 +32,7 @@ const Privacy: React.FC = () => {
             <h2 className="mt-8 text-xl font-semibold">3. How we use information that we retain</h2>
             <p>Application data that we manage for you, e.g. Policy Files for Policy Review, are used only as needed to provide our services to you. Account information such as email address and usage statistics may be used to provide support to you, or to communicate with you about our products, services and events. We do not share any retained data with 3rd parties.</p>
             <p className="mt-4">We may disclose retained information if we are required to do so by applicable law, court order, or other legal process.</p>
-            <p className="mt-4">Clause for Word uses Microsoft Azure OpenAI services which have a zero data retention policy. Calls to Azure OpenAI are not stored or retained by Microsoft or any other 3rd party.</p>
+            <p className="mt-4">We use OpenAI services to power our features. These providers do not use your data for training their models and may retain data temporarily (up to 30 days) for service delivery purposes, after which it's permanently deleted.</p>
 
             <h2 className="mt-8 text-xl font-semibold">4. Data Security</h2>
             <p>In addition to minimizing data retention, data access in Clause is secured using Microsoft and Google authentication. This means that account or application data stored on your behalf will comply with your company or personal authentication requirements. In addition, we implement appropriate technical and organizational measures to protect your personal information against unauthorized or unlawful processing, accidental loss, destruction, or damage.</p>
