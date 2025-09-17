@@ -46,7 +46,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "What is a credit?",
-      answer: "Credits Add more information about credits."
+      answer: "Credits are used to power Clause's AI features. Usage varies by task and document size. For example:\n\nDrafting a 1,000 word document consumes less than 2 credits\nRunning Policy Review with 10 policies against a 2,000 word document (e.g., a basic NDA) uses approximately 3 credits\n\nYour monthly credit allowance resets each billing cycle, so you can use Clause consistently throughout the month."
     },
     {
       question: "Can I transfer my license to another computer?",
