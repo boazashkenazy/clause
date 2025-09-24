@@ -169,7 +169,7 @@ const FAQ: React.FC = () => {
                 Need Support?
               </h2>
               <p className="mt-4 text-lg text-gray-600">
-                Having technical issues or need help with Clause? Submit a support ticket and our team will assist you promptly.
+                Having technical issues or need help with Clause? Submit a support request and our team will assist you promptly.
               </p>
               
               <div className="mt-8 space-y-6">
@@ -212,14 +212,14 @@ const FAQ: React.FC = () => {
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
-                  <h3 className="mt-4 text-lg font-medium text-gray-900">Support ticket submitted!</h3>
+                  <h3 className="mt-4 text-lg font-medium text-gray-900">Support request submitted!</h3>
                   <p className="mt-2 text-gray-600">We'll get back to you as soon as possible.</p>
                   <Button 
                     variant="outline" 
                     className="mt-4"
                     onClick={() => setIsSuccess(false)}
                   >
-                    Submit another ticket
+                    Submit another request
                   </Button>
                 </div>
               ) : (
@@ -313,7 +313,7 @@ const FAQ: React.FC = () => {
                     {isError && (
                       <div className="rounded-md bg-red-50 p-4">
                         <div className="text-sm text-red-700">
-                          There was an error submitting your support ticket. Please try again or contact us directly at info@clause.to
+                          There was an error submitting your support request. Please try again or contact us directly at info@clause.to
                         </div>
                       </div>
                     )}
@@ -325,7 +325,7 @@ const FAQ: React.FC = () => {
                         type="submit"
                         disabled={isLoading}
                       >
-                        {isLoading ? 'Submitting...' : 'Submit Support Ticket'}
+                        {isLoading ? 'Submitting...' : 'Submit Support Request'}
                       </Button>
                     </div>
                   </div>
