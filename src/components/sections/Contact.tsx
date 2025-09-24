@@ -226,43 +226,6 @@ const Contact: React.FC = () => {
             </motion.div>
           </div>
         </div>
-        
-        {/* Divider Line */}
-        <div className="mx-auto max-w-4xl mt-16 mb-8">
-          <div className="border-t border-gray-200"></div>
-        </div>
-        
-        {/* Newsletter Signup Section */}
-        <div className="mx-auto max-w-2xl">
-          <motion.div
-            initial={{ opacity: 0, y: 30 }}
-            animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
-            transition={{ duration: 0.6, delay: 0.4 }}
-            className="bg-white rounded-xl p-8 shadow-sm text-center"
-          >
-            <h3 className="text-2xl font-bold text-gray-900 mb-4">Subscribe to the Clause Newsletter</h3>
-            <p className="text-gray-600 mb-6">Stay updated with the latest features, legal insights, and product updates.</p>
-            <div>
-              <iframe
-                src="https://link.augmentedailabs.com/widget/form/KtQ50mlmw9NpQgyUksHh"
-                style={{width:'100%',height:'432px',border:'none',borderRadius:'8px'}}
-                id="inline-KtQ50mlmw9NpQgyUksHh" 
-                data-layout="{'id':'INLINE'}"
-                data-trigger-type="alwaysShow"
-                data-trigger-value=""
-                data-activation-type="alwaysActivated"
-                data-activation-value=""
-                data-deactivation-type="neverDeactivate"
-                data-deactivation-value=""
-                data-form-name="Clause.to Newsletter"
-                data-height="432"
-                data-layout-iframe-id="inline-KtQ50mlmw9NpQgyUksHh"
-                data-form-id="KtQ50mlmw9NpQgyUksHh"
-                title="Clause.to Newsletter"
-              />
-            </div>
-          </motion.div>
-        </div>
       </Container>
     </section>
   );
