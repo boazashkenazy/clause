@@ -233,7 +233,7 @@ const FAQ: React.FC = () => {
                         value={formData.issueType}
                         onChange={handleChange}
                         required
-                        className="mt-1 block w-full rounded-md border border-gray-300 px-3 py-2 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500"
+                        className="mt-1 block w-full appearance-none rounded-md border border-gray-300 pl-3 pr-12 py-2 shadow-sm focus:border-primary-500 focus:outline-none focus:ring-primary-500 bg-white bg-[url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTIiIGhlaWdodD0iOCIgdmlld0JveD0iMCAwIDEyIDgiIGZpbGw9Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+CjxwYXRoIGQ9Ik0xIDFMNiA2TDExIDEiIHN0cm9rZT0iIzZCNzI4MCIgc3Ryb2tlLXdpZHRoPSIxLjUiIHN0cm9rZS1saW5lY2FwPSJyb3VuZCIgc3Ryb2tlLWxpbmVqb2luPSJyb3VuZCIvPgo8L3N2Zz4K')] bg-no-repeat bg-[length:12px] bg-[position:right_16px_center]"
                       >
                         <option value="general">General Support</option>
                         <option value="technical">Technical Issue</option>
