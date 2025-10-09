@@ -1,5 +1,5 @@
 import React from 'react';
-import { Upload, Zap, FileCheck } from 'lucide-react';
+import { MessageSquare, Edit, FileText } from 'lucide-react';
 import Container from '../ui/Container';
 import { StepProps } from '../../types';
 import { motion } from 'framer-motion';
@@ -28,25 +28,25 @@ const Step: React.FC<StepProps> = ({ number, title, description, icon }) => {
   );
 };
 
-const HowItWorks: React.FC = () => {
+const AssistantHowItWorks: React.FC = () => {
   const steps: StepProps[] = [
     {
       number: 1,
-      title: "Drafting",
-      description: "Drafting mode offers an AI chat for document questions, drafting or revising document language.",
-      icon: <Upload size={24} className="stroke-primary-600" />
+      title: "Ask and Draft",
+      description: "Describe what you need in plain language and get polished clause suggestions instantly.",
+      icon: <MessageSquare size={24} className="stroke-primary-600" />
     },
     {
       number: 2,
-      title: "Policy Review",
-      description: "Policy Review in Clause automatically revises your document to comply with your internal policies",
-      icon: <Zap size={24} className="stroke-primary-600" />
+      title: "Refine on the Fly",
+      description: "Ask questions about specific provisions and receive clear explanations to guide your revisions.",
+      icon: <Edit size={24} className="stroke-primary-600" />
     },
     {
       number: 3,
-      title: "Mark-Up Instantly",
-      description: "Review the automatically redlined document and make final adjustments as needed",
-      icon: <FileCheck size={24} className="stroke-primary-600" />
+      title: "Build Complete Agreements",
+      description: "Generate full contract frameworks with intelligent suggestions tailored to your requirements.",
+      icon: <FileText size={24} className="stroke-primary-600" />
     }
   ];
 
@@ -66,10 +66,10 @@ const HowItWorks: React.FC = () => {
           className="text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            How Clause Works
+            Your AI Drafting Assistant
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Clause is a Microsoft Word AddIn that you can use alongside any open document
+            From first draft to final details, Assistant helps you create precise contract language faster.
           </p>
         </motion.div>
 
@@ -83,4 +83,4 @@ const HowItWorks: React.FC = () => {
   );
 };
 
-export default HowItWorks;
+export default AssistantHowItWorks;

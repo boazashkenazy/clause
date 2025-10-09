@@ -62,7 +62,7 @@ const Hero: React.FC = () => {
               size="lg" 
               onClick={() => window.location.href = '/gettingstarted'}
             >
-              Try Clause Now Free
+              Try Clause Now
             </Button>
           </motion.div>
         </div>
@@ -89,15 +89,6 @@ const Hero: React.FC = () => {
           animate={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.8 }}
         >
-          {/* Clause Word image */}
-          <div className="mb-4">
-            <img 
-              src="/images/clause-word.png"
-              alt="Clause AI integration with Microsoft Word for legal document review" 
-              className="h-[10rem]"
-            />
-          </div>
-          
           {/* Video container */}
           <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100 shadow-lg w-full max-w-4xl">
             {showVideo ? (
