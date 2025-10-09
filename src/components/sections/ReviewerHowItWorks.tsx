@@ -1,5 +1,5 @@
 import React from 'react';
-import { Upload, Zap, FileCheck } from 'lucide-react';
+import { Upload, Search, FileCheck } from 'lucide-react';
 import Container from '../ui/Container';
 import { StepProps } from '../../types';
 import { motion } from 'framer-motion';
@@ -28,24 +28,24 @@ const Step: React.FC<StepProps> = ({ number, title, description, icon }) => {
   );
 };
 
-const HowItWorks: React.FC = () => {
+const ReviewerHowItWorks: React.FC = () => {
   const steps: StepProps[] = [
     {
       number: 1,
-      title: "Drafting",
-      description: "Drafting mode offers an AI chat for document questions, drafting or revising document language.",
+      title: "Upload Your Playbook",
+      description: "Load your company's policies, standards, and preferred positions into Reviewer.",
       icon: <Upload size={24} className="stroke-primary-600" />
     },
     {
       number: 2,
-      title: "Policy Review",
-      description: "Policy Review in Clause automatically revises your document to comply with your internal policies",
-      icon: <Zap size={24} className="stroke-primary-600" />
+      title: "Run Instant Analysis",
+      description: "Reviewer scans contracts against your playbook and identifies every deviation or issue.",
+      icon: <Search size={24} className="stroke-primary-600" />
     },
     {
       number: 3,
-      title: "Mark-Up Instantly",
-      description: "Review the automatically redlined document and make final adjustments as needed",
+      title: "Get Ready-to-Use Redlines",
+      description: "Receive precise markup and suggestions that reflect your company's negotiating positions.",
       icon: <FileCheck size={24} className="stroke-primary-600" />
     }
   ];
@@ -66,10 +66,10 @@ const HowItWorks: React.FC = () => {
           className="text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            How Clause Works
+            Your Playbook, Automated
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Clause is a Microsoft Word AddIn that you can use alongside any open document
+            Turn hours of manual review into minutes with AI that knows your policies inside and out.
           </p>
         </motion.div>
 
@@ -83,4 +83,4 @@ const HowItWorks: React.FC = () => {
   );
 };
 
-export default HowItWorks;
+export default ReviewerHowItWorks;
