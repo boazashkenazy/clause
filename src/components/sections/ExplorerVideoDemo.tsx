@@ -4,7 +4,7 @@ import { motion } from 'framer-motion';
 import { useInView } from 'react-intersection-observer';
 import { Play } from 'lucide-react';
 
-const VideoDemo: React.FC = () => {
+const ExplorerVideoDemo: React.FC = () => {
   const [ref, inView] = useInView({
     triggerOnce: true,
     threshold: 0.1,
@@ -47,7 +47,7 @@ const VideoDemo: React.FC = () => {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            See Clause in Action
+            See Clause Explorer in Action
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Watch how Clause transforms document reviewing in just seconds.
@@ -98,4 +98,4 @@ const VideoDemo: React.FC = () => {
   );
 };
 
-export default VideoDemo;
+export default ExplorerVideoDemo;
