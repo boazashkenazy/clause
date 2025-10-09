@@ -1,5 +1,5 @@
 import React from 'react';
-import { Upload, Zap, FileCheck } from 'lucide-react';
+import { Map, Layers, Workflow } from 'lucide-react';
 import Container from '../ui/Container';
 import { StepProps } from '../../types';
 import { motion } from 'framer-motion';
@@ -28,25 +28,25 @@ const Step: React.FC<StepProps> = ({ number, title, description, icon }) => {
   );
 };
 
-const HowItWorks: React.FC = () => {
+const IntegratedServicesHowItWorks: React.FC = () => {
   const steps: StepProps[] = [
     {
       number: 1,
-      title: "Drafting",
-      description: "Drafting mode offers an AI chat for document questions, drafting or revising document language.",
-      icon: <Upload size={24} className="stroke-primary-600" />
+      title: "Map Your Ecosystem",
+      description: "We analyze your repositories, tools, and workflows to understand your needs.",
+      icon: <Map size={24} className="stroke-primary-600" />
     },
     {
       number: 2,
-      title: "Policy Review",
-      description: "Policy Review in Clause automatically revises your document to comply with your internal policies",
-      icon: <Zap size={24} className="stroke-primary-600" />
+      title: "Build Custom Connections",
+      description: "Our team develops secure integrations that sync Clause with your document management systems.",
+      icon: <Layers size={24} className="stroke-primary-600" />
     },
     {
       number: 3,
-      title: "Mark-Up Instantly",
-      description: "Review the automatically redlined document and make final adjustments as needed",
-      icon: <FileCheck size={24} className="stroke-primary-600" />
+      title: "Work Without Friction",
+      description: "Access Clause's AI capabilities directly within your existing tools and processes.",
+      icon: <Workflow size={24} className="stroke-primary-600" />
     }
   ];
 
@@ -66,10 +66,10 @@ const HowItWorks: React.FC = () => {
           className="text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            How Clause Works
+            Built for Your Workflow
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Clause is a Microsoft Word AddIn that you can use alongside any open document
+            We create tailored connections between Clause and your existing systems for a unified legal workspace.
           </p>
         </motion.div>
 
@@ -83,4 +83,4 @@ const HowItWorks: React.FC = () => {
   );
 };
 
-export default HowItWorks;
+export default IntegratedServicesHowItWorks;
