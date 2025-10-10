@@ -32,20 +32,20 @@ const HowItWorks: React.FC = () => {
   const steps: StepProps[] = [
     {
       number: 1,
-      title: "Drafting",
-      description: "Drafting mode offers an AI chat for document questions, drafting or revising document language.",
+      title: "Research",
+      description: "Get cited, supported answers to questions that may span many documents, and manage content for drafting and collaboration",
       icon: <Upload size={24} className="stroke-primary-600" />
     },
     {
       number: 2,
-      title: "Policy Review",
-      description: "Policy Review in Clause automatically revises your document to comply with your internal policies",
+      title: "Drafting",
+      description: "Bring the full power of the most advanced AI models into your Word environment for analysis, drafting or revising, including access to curated content",
       icon: <Zap size={24} className="stroke-primary-600" />
     },
     {
       number: 3,
-      title: "Mark-Up Instantly",
-      description: "Review the automatically redlined document and make final adjustments as needed",
+      title: "Policy Review",
+      description: "Automatically redline documents inside of Microsoft Word, or in bulk to comply with your internal policies",
       icon: <FileCheck size={24} className="stroke-primary-600" />
     }
   ];
@@ -69,7 +69,7 @@ const HowItWorks: React.FC = () => {
             How Clause Works
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Clause is a Microsoft Word AddIn that you can use alongside any open document
+            The Clause Platform is a web application for working with large collections of legal documents and a Microsoft Word AddIn that you can use alongside any open document
           </p>
         </motion.div>
 

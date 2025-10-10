@@ -38,33 +38,33 @@ const Features: React.FC = () => {
 
   const features: FeatureProps[] = [
     {
-      title: "Word-Native Experience",
-      description: "Works seamlessly inside Microsoft Word with no need to switch between applications.",
+      title: "Structured Analysis",
+      description: "Clause employs a unique structured analysis approach that brings all of your documents to life, delivering fast, accurate answers to complex questions",
       icon: <Monitor size={20} className="stroke-primary-600" />
     },
     {
-      title: "Context Aware",
-      description: "Clause knows exactly which section of the document is selected and responds accordingly",
+      title: "Web & Word",
+      description: "Clause works on the Web and seamlessly inside of Microsoft Word with no need to switch between applications to access the full power of the most advanced AI models.",
       icon: <Shield size={20} className="stroke-primary-600" />
     },
     {
-      title: "Instant Revisions",
-      description: "Clause makes automatic change-tracked revisions and add comments as directed by the user, or driven by policy review.",
+      title: "Collaboration",
+      description: "Policies, Prompts, and Curated Content can be shared within your organization and with clients or business partners to drive fast turn around with better quality and compliance.",
       icon: <Wifi size={20} off={true} className="stroke-primary-600" />
     },
     {
       title: "Private & Secure",
-      description: "Your documents are not stored by Clause, ensuring privacy and security.",
+      description: "Your data is for you. We store and use data only to the extent necessary to support your needs and do not use it for any other purpose.",
       icon: <Lock size={20} className="stroke-primary-600" />
     },
     {
-      title: "Policy Management and Sharing",
-      description: "Easily create, manage, and share policies for high performance policy review workflows",
+      title: "Seamless Word Experience",
+      description: "Clause focuses on selected paragraphs, provides active citations in responses, and directly applies tracked changes to your document",
       icon: <Layers size={20} className="stroke-primary-600" />
     },
     {
-      title: "Powerful Drafting Assistant",
-      description: "Ask questions, draft new language, or generate AI driven revisions in Word integrated chat.",
+      title: "GPT Where you Work",
+      description: "Access the full power of the world's most advanced AI where you work, inside of Word and integrated with your document library",
       icon: <Users size={20} className="stroke-primary-600" />
     }
   ];
@@ -80,10 +80,10 @@ const Features: React.FC = () => {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Get done in minutes what used to take hours directly inside Microsoft Word
+            Get done in minutes what used to take hours
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Clause combines powerful AI with ease of use to accelerate your contracts and agreements workflow.
+            Clause combines powerful AI with ease of use to accelerate your contract and agreement workflows.
           </p>
         </motion.div>
 
