@@ -33,19 +33,19 @@ const AssistantHowItWorks: React.FC = () => {
     {
       number: 1,
       title: "Ask and Draft",
-      description: "Describe what you need in plain language and get polished clause suggestions instantly.",
+      description: "Describe what you need in plain language and get suggestions or revisions instantly.",
       icon: <MessageSquare size={24} className="stroke-primary-600" />
     },
     {
       number: 2,
       title: "Refine on the Fly",
-      description: "Ask questions about specific provisions and receive clear explanations to guide your revisions.",
+      description: "Ask questions about specific provisions and receive cited explanations to guide revisions.",
       icon: <Edit size={24} className="stroke-primary-600" />
     },
     {
       number: 3,
-      title: "Build Complete Agreements",
-      description: "Generate full contract frameworks with intelligent suggestions tailored to your requirements.",
+      title: "Build Quality Documents",
+      description: "Leverage curated content from Clause Explorer and other sources to produce high quality documents quickly.",
       icon: <FileText size={24} className="stroke-primary-600" />
     }
   ];

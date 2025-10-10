@@ -28,7 +28,7 @@ const ClauseAssistant: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Draft Smarter, Not Harder
+              Draft Smarter, Without Leaving Word
             </motion.h1>
             <motion.p 
               className="mx-auto mt-6 max-w-2xl text-xl text-gray-600"
@@ -36,7 +36,7 @@ const ClauseAssistant: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Get AI-powered assistance to draft clauses, build agreements, and answer complex contract questions in seconds—so you can focus on strategy, not syntax.
+              Get AI-powered assistance to draft clauses, build agreements, and answer complex contract questions in seconds—so you can focus on strategy.
             </motion.p>
             <motion.div 
               className="mt-10 flex flex-col items-center justify-center"
