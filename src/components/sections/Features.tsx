@@ -39,7 +39,7 @@ const Features: React.FC = () => {
   const features: FeatureProps[] = [
     {
       title: "Structured Analysis",
-      description: "Clause employs a unique structured analysis approach that brings all of your documents to life, delivering fast, accurate answers to complex questions",
+      description: "Clause employs a unique structured analysis approach that brings all of your documents to life, delivering fast, accurate answers to complex questions.",
       icon: <Monitor size={20} className="stroke-primary-600" />
     },
     {
@@ -59,12 +59,12 @@ const Features: React.FC = () => {
     },
     {
       title: "Seamless Word Experience",
-      description: "Clause focuses on selected paragraphs, provides active citations in responses, and directly applies tracked changes to your document",
+      description: "Clause focuses on selected paragraphs, provides active citations in responses, and directly applies tracked changes to your document.",
       icon: <Layers size={20} className="stroke-primary-600" />
     },
     {
-      title: "GPT Where you Work",
-      description: "Access the full power of the world's most advanced AI where you work, inside of Word and integrated with your document library",
+      title: "GPT Where You Work",
+      description: "Access the full power of the world's most advanced AI where you work, inside of Word and integrated with your document library.",
       icon: <Users size={20} className="stroke-primary-600" />
     }
   ];
