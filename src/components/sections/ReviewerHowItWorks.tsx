@@ -32,20 +32,20 @@ const ReviewerHowItWorks: React.FC = () => {
   const steps: StepProps[] = [
     {
       number: 1,
-      title: "Upload Your Playbook",
-      description: "Load your company's policies, standards, and preferred positions into Reviewer.",
+      title: "Collaborate with Shared Policies",
+      description: "Load your company's policies, standards, and preferred positions into Reviewer and share with colleagues and clients.",
       icon: <Upload size={24} className="stroke-primary-600" />
     },
     {
       number: 2,
       title: "Run Instant Analysis",
-      description: "Reviewer scans contracts against your playbook and identifies every deviation or issue.",
+      description: "Reviewer scans contracts against your policies, identifies every deviation or issue, and suggests revisions.",
       icon: <Search size={24} className="stroke-primary-600" />
     },
     {
       number: 3,
-      title: "Get Ready-to-Use Redlines",
-      description: "Receive precise markup and suggestions that reflect your company's negotiating positions.",
+      title: "Automated Redlines",
+      description: "Receive markups and analysis that reflect your company's negotiating positions.",
       icon: <FileCheck size={24} className="stroke-primary-600" />
     }
   ];
@@ -66,7 +66,7 @@ const ReviewerHowItWorks: React.FC = () => {
           className="text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Your Playbook, Automated
+            Your Policies, Automated
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             Turn hours of manual review into minutes with AI that knows your policies inside and out.

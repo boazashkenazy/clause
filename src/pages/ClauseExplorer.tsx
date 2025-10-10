@@ -28,7 +28,7 @@ const ClauseExplorer: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.1 }}
             >
-              Find the Perfect Clause, Every Time
+              Get Answers from Your Agreements, Instantly
             </motion.h1>
             <motion.p 
               className="mx-auto mt-6 max-w-2xl text-xl text-gray-600"
@@ -36,7 +36,7 @@ const ClauseExplorer: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Search across your entire contract library, discover the language that works, and build a repository of battle-tested clauses for future deals.
+              Ask questions that span multiple documents and receive consolidated and cited answers in seconds.
             </motion.p>
             <motion.div 
               className="mt-10 flex flex-col items-center justify-center"

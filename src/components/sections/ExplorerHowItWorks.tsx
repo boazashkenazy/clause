@@ -33,19 +33,19 @@ const ExplorerHowItWorks: React.FC = () => {
     {
       number: 1,
       title: "Search with Precision",
-      description: "Find specific provisions across complex contracts using natural language queries.",
+      description: "Find and compare specific provisions across all your contracts using natural language queries.",
       icon: <Search size={24} className="stroke-primary-600" />
     },
     {
       number: 2,
       title: "Save Your Best Work",
-      description: "Build a personal library of effective clauses that have been negotiated and approved.",
+      description: "Build and share collections of effective clauses that have been negotiated and approved.",
       icon: <Save size={24} className="stroke-primary-600" />
     },
     {
       number: 3,
       title: "Reuse with Confidence",
-      description: "Pull proven language into new agreements, ensuring consistency and saving negotiation time.",
+      description: "Pull proven language into Clause Assistant, ensuring consistency and saving negotiation time.",
       icon: <RotateCcw size={24} className="stroke-primary-600" />
     }
   ];
@@ -66,10 +66,10 @@ const ExplorerHowItWorks: React.FC = () => {
           className="text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Search, Save, Succeed
+            Find the Perfect Clause, Every Time
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Transform your contract archive into a strategic advantage with intelligent search and clause management.
+            Search across your entire contract library and build collections of battle-tested clauses for future deals.
           </p>
         </motion.div>
 
