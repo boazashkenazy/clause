@@ -49,7 +49,7 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            Draft, review and revise with the full power of AI seamlessly integrated into Microsoft Word.
+            The full power of AI for research, drafting, review and revision—right where you work.
           </motion.p>
           <motion.div 
             className="mt-10 flex flex-col items-center justify-center"
@@ -79,7 +79,7 @@ const Hero: React.FC = () => {
             See Clause in Action
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Watch how Clause transforms document reviewing in just seconds.
+            Watch how Clause transforms document Research and Drafting workflows in seconds.
           </p>
         </motion.div>
 
