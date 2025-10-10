@@ -66,7 +66,7 @@ const IntegratedServicesHowItWorks: React.FC = () => {
           className="text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            Built for Your Workflow
+            Built for Your Workflows
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
             We create tailored connections between Clause and your existing systems for a unified legal workspace.
