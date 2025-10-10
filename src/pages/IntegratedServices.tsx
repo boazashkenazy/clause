@@ -36,7 +36,7 @@ const IntegratedServices: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Custom integrations that connect Clause to your document repositories, CLMs, and workflows—so your team works seamlessly across all platforms.
+              Integrations that connect Clause to your document repositories, CLMs, and workflows—so your team works seamlessly across all platforms.
             </motion.p>
             <motion.div 
               className="mt-10 flex flex-col items-center justify-center"

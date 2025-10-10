@@ -36,7 +36,7 @@ const ClauseReviewer: React.FC = () => {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, delay: 0.2 }}
             >
-              Automatically apply your playbooks and policies to any contract for instant, consistent redlines that match your company's standards.
+              Automatically apply playbooks and policies to any contract for instant, consistent redlines that match your company's standards.
             </motion.p>
             <motion.div 
               className="mt-10 flex flex-col items-center justify-center"

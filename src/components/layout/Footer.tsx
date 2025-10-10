@@ -20,7 +20,7 @@ const Footer: React.FC = () => {
           <div className="md:col-span-2">
             <h3 className="text-2xl font-bold text-primary-600">Clause</h3>
             <p className="mt-4 max-w-md text-gray-600">
-              Legal Intelligence for Business Users. Review, draft, and refine every agreement with business-smart AI, seamlessly integrated into Word.
+              Legal Intelligence for Business Users. Review, draft, and refine every agreement with business-smart AI right where you work.
             </p>
 
           </div>
