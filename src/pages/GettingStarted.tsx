@@ -163,7 +163,7 @@ const GettingStarted: React.FC = () => {
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Still need help?</h3>
                 <p className="text-gray-600 text-sm">
-                  Contact our support team at <a href="mailto:info@clause.to" className="text-primary-600 hover:text-primary-700">info@clause.to</a> and we'll help you get set up.
+                  Contact our support team at <a href="mailto:info@clause.so" className="text-primary-600 hover:text-primary-700">info@clause.so</a> and we'll help you get set up.
                 </p>
               </div>
             </div>

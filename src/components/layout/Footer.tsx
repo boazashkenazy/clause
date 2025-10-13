@@ -43,9 +43,9 @@ const Footer: React.FC = () => {
               <li><Link to="/terms" className="text-gray-600 hover:text-primary-600">Terms & Conditions</Link></li>
               <li><Link to="/privacy" className="text-gray-600 hover:text-primary-600">Privacy Policy</Link></li>
               <li>
-                <a href="mailto:info@clause.to" className="flex items-center text-gray-600 hover:text-primary-600">
+                <a href="mailto:info@clause.so" className="flex items-center text-gray-600 hover:text-primary-600">
                   <Mail size={16} className="mr-1 text-primary-600" />
-                  info@clause.to
+                  info@clause.so
                 </a>
               </li>
             </ul>
