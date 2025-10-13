@@ -39,7 +39,7 @@ const Terms: React.FC = () => {
 
             <h2 className="mt-8 text-xl font-semibold">7. Contact Information</h2>
             <p>For any questions regarding these terms, please contact us at:</p>
-            <p>Email: info@clause.to</p>
+            <p>Email: info@clause.so</p>
           </div>
         </div>
       </Container>
