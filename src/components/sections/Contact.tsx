@@ -104,7 +104,7 @@ const Contact: React.FC = () => {
                   </div>
                   <div className="ml-4">
                     <h3 className="text-lg font-medium text-gray-900">Email us</h3>
-                    <p className="mt-1 text-gray-600">info@clause.to</p>
+                    <p className="mt-1 text-gray-600">info@clause.so</p>
                   </div>
                 </div>
               </div>
@@ -205,7 +205,7 @@ const Contact: React.FC = () => {
                     {isError && (
                       <div className="rounded-md bg-red-50 p-4">
                         <div className="text-sm text-red-700">
-                          There was an error sending your message. Please try again or contact us directly at info@clause.to
+                          There was an error sending your message. Please try again or contact us directly at info@clause.so
                         </div>
                       </div>
                     )}
