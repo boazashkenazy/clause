@@ -1,1 +1,4 @@
+https://clause.to/* https://clause.so/:splat 301!
+http://clause.to/* https://clause.so/:splat 301!
+
 /*    /index.html   200
