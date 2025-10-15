@@ -1,6 +1,6 @@
 import React from 'react';
 import Container from '../ui/Container';
-import { Mail } from 'lucide-react';
+import { Mail, Linkedin, PenTool } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const Footer: React.FC = () => {
@@ -22,6 +22,35 @@ const Footer: React.FC = () => {
             <p className="mt-4 max-w-md text-gray-600">
               Legal Intelligence for Business Users. Review, draft, and refine every agreement with business-smart AI right where you work.
             </p>
+            
+            <div className="mt-6 flex space-x-4">
+              <a 
+                href="https://clauseai.substack.com/subscribe" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary-600 transition-colors"
+                aria-label="Subscribe to our Substack"
+              >
+                <svg 
+                  width="20" 
+                  height="20" 
+                  viewBox="0 0 24 24" 
+                  fill="currentColor"
+                  className="text-current"
+                >
+                  <path d="M22.539 8.242H1.46V5.406h21.08v2.836zM1.46 10.812V24L12 18.11 22.54 24V10.812H1.46zM22.54 0H1.46v2.836h21.08V0z"/>
+                </svg>
+              </a>
+              <a 
+                href="https://www.linkedin.com/company/clause-ai" 
+                target="_blank" 
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-primary-600 transition-colors"
+                aria-label="Follow us on LinkedIn"
+              >
+                <Linkedin size={20} />
+              </a>
+            </div>
 
           </div>
 
