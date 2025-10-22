@@ -80,23 +80,23 @@ const FAQ: React.FC = () => {
   const faqItems: FAQItemProps[] = [
     {
       question: "Is my document data secure when using Clause?",
-      answer: "Yes, your data remains completely private and secure. We don't store any of your document content, chat histories, or processing results. Your data is only processed temporarily to provide our service, then immediately discarded."
+      answer: "Yes, your data remains completely private and secure. We don't store any of your document content, chat histories, or processing results. Your data is held temporarily for processing to provide our service. Clause leverages Microsoft Azure's robust security measures, including advanced encryption and identity management, to ensure comprehensive protection for your data."
     },
     {
       question: "Do you collect or store my Word documents?",
       answer: "No, we do not collect, store, or retain the contents of your Word documents. Documents are processed temporarily to provide analysis and suggestions, then immediately discarded from our systems."
     },
     {
-      question: "What happens to my chat dialog histories and prompts?",
-      answer: "We do not store chat dialog histories, prompts, or responses. These interactions are processed in real-time to provide our service, but are not retained in our systems or used for any other purpose."
+      question: "What happens to my chat dialog histories?",
+      answer: "We do not store chat dialog histories or responses. These interactions are processed in real-time to provide our service, but are not retained in our systems or used for any other purpose."
     },
     {
-      question: "Do you use my data to train AI models?",
-      answer: "No, we never use your data for training AI models, marketing purposes, or commercial third-party sharing. Your content remains private and is only processed as minimally necessary to deliver our service."
+      question: "What customer data is stored by Clause?",
+      answer: "Clause includes features for managing and sharing policy files and prompts. This customer data is stored in secure Clause Azure containers segregated by user and organization."
     },
     {
-      question: "What AI services do you use and how do they handle my data?",
-      answer: "We use OpenAI services to power our features. These providers do not use your data for training their models and may retain data temporarily (up to 30 days) for service delivery purposes, after which it's permanently deleted."
+      question: "Do you use my data to train AI models or share it with third parties?",
+      answer: "Your data is never used to train AI models. Clause uses model provider APIs from Azure (OpenAI), Google, and Anthropic to power our features under strict contractual obligations to protect your data. These providers store your data temporarily only for the purposes of generating responses and preventing abuse. Clause uses secure Azure cloud services and does not share your data with any other 3rd party for any purpose. Our default and recommended AI model provider is our Azure OpenAI deployment, which is hosted in the US and operates within Azure's infrastructure under clear and well-documented privacy policies."
     },
     {
       question: "Can I use Clause on my work device?",
@@ -104,7 +104,11 @@ const FAQ: React.FC = () => {
     },
     {
       question: "Where is my data processed?",
-      answer: "Your data is processed through OpenAI's secure infrastructure with enterprise-grade security measures. Data processing occurs only during active use of the service."
+      answer: "Your data is processed in the Clause Azure cloud services infrastructure in the US and by our AI model providers."
+    },
+    {
+      question: "Is it safe to use Clause with PHI?",
+      answer: "Clause data management practices are consistent with ISO/IEC 27018 for processing of PII and PHI. Clause will execute a BAA with covered entities."
     },
     {
       question: "What versions of Microsoft Word does Clause support?",
@@ -120,7 +124,11 @@ const FAQ: React.FC = () => {
     },
     {
       question: "Do you offer a trial version?",
-      answer: "Yes, we offer 30 day free trial with no credit card required."
+      answer: "Yes, we offer a 30-day free trial with no credit card required."
+    },
+    {
+      question: "How do AI providers protect my data?",
+      answer: "Learn more about how our AI providers protect your data when we use their API services. Our default provider is OpenAI. Users may elect to use Google or Anthropic instead via Settings.\n\n• OpenAI: https://platform.openai.com/docs/guides/your-data\n• Google: https://ai.google.dev/gemini-api/docs/usage-policies and https://ai.google.dev/gemini-api/terms\n• Anthropic: https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data\n• Azure OpenAI: https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy"
     }
   ];
 
