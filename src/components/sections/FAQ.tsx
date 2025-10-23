@@ -128,7 +128,7 @@ const FAQ: React.FC = () => {
     },
     {
       question: "How do AI providers protect my data?",
-      answer: "Learn more about how our AI providers protect your data when we use their API services. Our default provider is OpenAI. Users may elect to use Google or Anthropic instead via Settings.\n\n• OpenAI: https://platform.openai.com/docs/guides/your-data\n• Google: https://ai.google.dev/gemini-api/docs/usage-policies and https://ai.google.dev/gemini-api/terms\n• Anthropic: https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data\n• Azure OpenAI: https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy"
+      answer: "Learn more about how our AI providers protect your data when we use their API services. Our default provider is OpenAI. Users may elect to use Google or Anthropic instead via Settings."
     }
   ];
 
