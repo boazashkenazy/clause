@@ -54,11 +54,12 @@ const Privacy: React.FC = () => {
             <p>We may update this Privacy Policy from time to time to reflect changes in our practices or for other operational, legal, or regulatory reasons. If we make material changes, we will notify you by posting an updated version on our website and, where possible, by other appropriate means. Unless otherwise required by applicable law, changes will take effect at least 7 days after we provide notice. Your continued use of our services after the effective date of any changes indicates your acceptance of those changes.</p>
             
             <h2 className="mt-8 text-xl font-semibold">Learn more about how our AI Providers protect your data</h2>
-            <p>Learn more about how our AI providers protect your data when we use their API services:</p>
+            <br />
+            
             <ul className="list-disc pl-6">
-              <li><strong>Azure OpenAI:</strong> <a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy?tabs=azure-portal" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy?tabs=azure-portal</a></li>
-              <li><strong>Google:</strong> <a href="https://ai.google.dev/gemini-api/docs/usage-policies" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://ai.google.dev/gemini-api/docs/usage-policies</a> and <a href="https://ai.google.dev/gemini-api/terms" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://ai.google.dev/gemini-api/terms</a></li>
-              <li><strong>Anthropic:</strong> <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data</a></li>
+              <li><strong>Azure OpenAI:</strong> <a href="https://learn.microsoft.com/en-us/azure/ai-foundry/responsible-ai/openai/data-privacy?tabs=azure-portal" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Link</a></li>
+              <li><strong>Google:</strong> <a href="https://ai.google.dev/gemini-api/docs/usage-policies" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Link</a> and <a href="https://ai.google.dev/gemini-api/terms" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Link</a></li>
+              <li><strong>Anthropic:</strong> <a href="https://privacy.claude.com/en/articles/7996866-how-long-do-you-store-my-organization-s-data" className="text-blue-600 underline" target="_blank" rel="noopener noreferrer">Link</a></li>
             </ul>
           </div>
         </div>
