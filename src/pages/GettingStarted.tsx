@@ -140,9 +140,9 @@ const GettingStarted: React.FC = () => {
 
             <div className="grid gap-6 md:grid-cols-2">
               <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Can't find Clause AI in the store?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Can't find Clause in the AppSource store?</h3>
                 <p className="text-gray-600 text-sm">
-                  Make sure you're searching for "Clause AI" exactly. You can also try searching just "Clause" or visit the Microsoft AppSource directly using our install link above.
+                  Make sure you're searching for "Clause AI" exactly. You can also try searching just "Clause" or visit the Microsoft AppSource directly.
                 </p>
               </div>
               
