@@ -154,7 +154,7 @@ const Header: React.FC = () => {
               <a href="https://clauseai.substack.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary-600">Blog</a>
             </nav>
             
-            <Button variant="primary" onClick={() => window.open('https://app.clause.to', '_blank')}>
+            <Button variant="primary" onClick={() => window.open('https://app.clause.so', '_blank')}>
               Sign In
             </Button>
           </div>
@@ -210,7 +210,7 @@ const Header: React.FC = () => {
               <Link to="/faq" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>FAQ</Link>
               <a href="https://clauseai.substack.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Blog</a>
               <Button variant="primary" onClick={() => {
-                window.open('https://app.clause.to', '_blank');
+                window.open('https://app.clause.so', '_blank');
                 toggleMenu();
               }}>
                 Sign In

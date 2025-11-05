@@ -17,7 +17,7 @@ const OrganizationSetup: React.FC = () => {
     title: 'Organization Setup - Deploy Clause for Microsoft Word to Your Organization',
     description: 'Learn how to deploy Clause for Microsoft Word across your organization in 4 simple steps. Complete admin guide for Microsoft 365 administrators.',
     keywords: 'deploy Clause Word add-in organization, Microsoft 365 admin deployment, enterprise Word add-in setup, admin install Clause AI, organization policy management',
-    canonical: 'https://clause.to/organization-setup'
+    canonical: 'https://clause.so/organization-setup'
   });
 
   const installationSteps = [
@@ -159,7 +159,7 @@ const OrganizationSetup: React.FC = () => {
               <div className="bg-white rounded-xl p-6 shadow-sm border">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Need Support?</h3>
                 <p className="text-gray-600 text-sm">
-                  Contact our admin support team at <a href="mailto:support@clause.to" className="text-primary-600 hover:text-primary-700 underline">support@clause.to</a> for deployment assistance or enterprise questions.
+                  Contact our admin support team at <a href="mailto:support@clause.so" className="text-primary-600 hover:text-primary-700 underline">support@clause.so</a> for deployment assistance or enterprise questions.
                 </p>
               </div>
             </div>
@@ -186,7 +186,7 @@ const OrganizationSetup: React.FC = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  onClick={() => window.open('https://app.clause.to', '_blank')}
+                  onClick={() => window.open('https://app.clause.so', '_blank')}
                   className="bg-white text-primary-600 border-white hover:bg-gray-50 flex items-center gap-2"
                 >
                   <ExternalLink size={20} />

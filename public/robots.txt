@@ -2,7 +2,7 @@ User-agent: *
 Allow: /
 
 # Sitemap
-Sitemap: https://clause.to/sitemap.xml
+Sitemap: https://clause.so/sitemap.xml
 
 # Disallow sensitive pages
 Disallow: /checkout
