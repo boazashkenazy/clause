@@ -17,7 +17,7 @@ const GettingStarted: React.FC = () => {
     title: 'Getting Started - How to Install Clause for Microsoft Word',
     description: 'Learn how to install and set up Clause for Microsoft Word in 5 simple steps. Complete installation guide with screenshots and troubleshooting tips.',
     keywords: 'install Clause Word add-in, Microsoft Word legal add-in setup, how to install Clause AI, Word add-in installation guide, legal document software setup',
-    canonical: 'https://clause.to/gettingstarted'
+    canonical: 'https://clause.so/gettingstarted'
   });
 
   const installationSteps = [
@@ -156,7 +156,7 @@ const GettingStarted: React.FC = () => {
               <div className="bg-gray-50 rounded-xl p-6">
                 <h3 className="text-lg font-semibold text-gray-900 mb-3">Need help with your account?</h3>
                 <p className="text-gray-600 text-sm">
-                  Visit <a href="https://app.clause.to" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700">app.clause.to</a> to sign in or create your account and manage your subscription.
+                  Visit <a href="https://app.clause.so" target="_blank" rel="noopener noreferrer" className="text-primary-600 hover:text-primary-700">app.clause.so</a> to sign in or create your account and manage your subscription.
                 </p>
               </div>
               
@@ -190,7 +190,7 @@ const GettingStarted: React.FC = () => {
                 <Button 
                   variant="outline" 
                   size="lg"
-                  onClick={() => window.open('https://app.clause.to', '_blank')}
+                  onClick={() => window.open('https://app.clause.so', '_blank')}
                   className="bg-white text-primary-600 border-white hover:bg-gray-50 flex items-center gap-2"
                 >
                   <ExternalLink size={20} />
