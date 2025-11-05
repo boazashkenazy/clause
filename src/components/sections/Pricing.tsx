@@ -96,10 +96,10 @@ const PricingCard: React.FC<PricingCardProps> = ({
             window.location.href = '/gettingstarted';
           } : cta === "Get Plus" ? () => {
             // Link to Plus plan settings
-            window.open('https://app.clause.to/portal/settings?plan=plus', '_blank');
+            window.open('https://app.clause.so/portal/settings?plan=plus', '_blank');
           } : cta === "Get Pro" ? () => {
             // Link to Pro plan settings
-            window.open('https://app.clause.to/portal/settings?plan=pro', '_blank');
+            window.open('https://app.clause.so/portal/settings?plan=pro', '_blank');
           } : onPurchase
         }
       >

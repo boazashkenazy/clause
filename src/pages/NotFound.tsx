@@ -10,7 +10,7 @@ const NotFound: React.FC = () => {
   useSEO({
     title: '404 - Page Not Found | Clause',
     description: 'The page you are looking for could not be found. Return to Clause homepage or explore our legal AI solutions for Microsoft Word.',
-    canonical: 'https://clause.to/404'
+    canonical: 'https://clause.so/404'
   });
 
   return (
