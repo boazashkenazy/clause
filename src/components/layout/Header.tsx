@@ -3,6 +3,7 @@ import { Menu, X, ChevronDown } from 'lucide-react';
 import { Link, useNavigate } from 'react-router-dom';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
+import { analytics } from '../../utils/analytics';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -149,12 +150,28 @@ const Header: React.FC = () => {
                 )}
               </div>
               
-              <Link to="/pricing" className="text-gray-700 hover:text-primary-600">Pricing</Link>
-              <Link to="/faq" className="text-gray-700 hover:text-primary-600">FAQ</Link>
+              <Link
+                to="/pricing"
+                className="text-gray-700 hover:text-primary-600"
+                onClick={() => analytics.trackLinkClick('/pricing', 'Pricing', false)}
+              >
+                Pricing
+              </Link>
+              <Link
+                to="/faq"
+                className="text-gray-700 hover:text-primary-600"
+                onClick={() => analytics.trackLinkClick('/faq', 'FAQ', false)}
+              >
+                FAQ
+              </Link>
               <a href="https://clauseai.substack.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary-600">Blog</a>
             </nav>
             
-            <Button variant="primary" onClick={() => window.open('https://app.clause.so', '_blank')}>
+            <Button
+              variant="primary"
+              trackingId="header-sign-in"
+              onClick={() => window.open('https://app.clause.so', '_blank')}
+            >
               Sign In
             </Button>
           </div>
@@ -209,10 +226,14 @@ const Header: React.FC = () => {
               <Link to="/pricing" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Pricing</Link>
               <Link to="/faq" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>FAQ</Link>
               <a href="https://clauseai.substack.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Blog</a>
-              <Button variant="primary" onClick={() => {
-                window.open('https://app.clause.so', '_blank');
-                toggleMenu();
-              }}>
+              <Button
+                variant="primary"
+                trackingId="header-sign-in"
+                onClick={() => {
+                  window.open('https://app.clause.so', '_blank');
+                  toggleMenu();
+                }}
+              >
                 Sign In
               </Button>
             </nav>

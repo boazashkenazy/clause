@@ -187,18 +187,20 @@ const GettingStarted: React.FC = () => {
                 Now that you have Clause installed, explore all the features available to streamline your legal document workflow.
               </p>
               <div className="flex flex-col sm:flex-row items-center justify-center gap-4">
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   size="lg"
+                  trackingId="getting-started-visit-app"
                   onClick={() => window.open('https://app.clause.so', '_blank')}
                   className="bg-white text-primary-600 border-white hover:bg-gray-50 flex items-center gap-2"
                 >
                   <ExternalLink size={20} />
                   Visit Clause App
                 </Button>
-                <Button 
-                  variant="outline" 
+                <Button
+                  variant="outline"
                   size="lg"
+                  trackingId="getting-started-contact-support"
                   onClick={() => {
                     const contactSection = document.getElementById('contact');
                     if (contactSection) {

@@ -1,4 +1,5 @@
 import React from 'react';
+import { analytics } from '../../utils/analytics';
 
 type ButtonVariant = 'primary' | 'secondary' | 'outline' | 'text';
 type ButtonSize = 'sm' | 'md' | 'lg';
@@ -11,6 +12,7 @@ interface ButtonProps {
   className?: string;
   type?: 'button' | 'submit' | 'reset';
   disabled?: boolean;
+  trackingId?: string; // Optional tracking ID for analytics
 }
 
 const Button: React.FC<ButtonProps> = ({
@@ -21,7 +23,20 @@ const Button: React.FC<ButtonProps> = ({
   className = '',
   type = 'button',
   disabled = false,
+  trackingId,
 }) => {
+  const handleClick = () => {
+    // Track button click if tracking ID is provided
+    if (trackingId) {
+      const buttonText = typeof children === 'string' ? children : undefined;
+      analytics.trackButtonClick(trackingId, buttonText);
+    }
+
+    // Call original onClick handler
+    if (onClick) {
+      onClick();
+    }
+  };
   const baseStyles = 'inline-flex items-center justify-center rounded-md font-medium transition-colors focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-offset-2 disabled:opacity-50 disabled:pointer-events-none';
   
   const variantStyles = {
@@ -40,7 +55,7 @@ const Button: React.FC<ButtonProps> = ({
   return (
     <button
       type={type}
-      onClick={onClick}
+      onClick={handleClick}
       disabled={disabled}
       className={`${baseStyles} ${variantStyles[variant]} ${sizeStyles[size]} ${className}`}
     >

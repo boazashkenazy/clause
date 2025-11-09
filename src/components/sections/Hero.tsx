@@ -3,11 +3,12 @@ import Container from '../ui/Container';
 import Button from '../ui/Button';
 import { motion } from 'framer-motion';
 import { Play, Pause } from 'lucide-react';
+import { useVideoTracking } from '../../hooks/useVideoTracking';
 
 const Hero: React.FC = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
   const [showVideo, setShowVideo] = useState(false);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRef = useVideoTracking('homepage-hero-video');
 
   const toggleVideo = () => {
     if (!showVideo) {
@@ -57,10 +58,11 @@ const Hero: React.FC = () => {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Button 
-              variant="primary" 
-              size="lg" 
+            <Button
+              variant="primary"
+              size="lg"
               onClick={() => window.location.href = '/gettingstarted'}
+              trackingId="hero-cta-try-now"
             >
               Try Clause Now
             </Button>

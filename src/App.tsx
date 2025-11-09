@@ -16,6 +16,8 @@ import ClauseExplorer from './pages/ClauseExplorer';
 import IntegratedServices from './pages/IntegratedServices';
 import NotFound from './pages/NotFound';
 import { useEffect } from 'react';
+import { usePageTracking } from './hooks/usePageTracking';
+import { useNavigationTracking } from './hooks/useNavigationTracking';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -27,33 +29,43 @@ function ScrollToTop() {
   return null;
 }
 
+function AppContent() {
+  // Initialize analytics tracking
+  usePageTracking();
+  useNavigationTracking();
+
+  return (
+    <div className="min-h-screen">
+      <ScrollToTop />
+      <Header />
+
+      <main>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/pricing" element={<Pricing />} />
+          <Route path="/faq" element={<FAQ />} />
+          <Route path="/gettingstarted" element={<GettingStarted />} />
+          <Route path="/organization-setup" element={<OrganizationSetup />} />
+          <Route path="/assistant" element={<ClauseAssistant />} />
+          <Route path="/reviewer" element={<ClauseReviewer />} />
+          <Route path="/explorer" element={<ClauseExplorer />} />
+          <Route path="/integratedservices" element={<IntegratedServices />} />
+          <Route path="/checkout" element={<Checkout />} />
+          <Route path="/privacy" element={<Privacy />} />
+          <Route path="/terms" element={<Terms />} />
+          <Route path="*" element={<NotFound />} />
+        </Routes>
+      </main>
+
+      <Footer />
+    </div>
+  );
+}
+
 function App() {
   return (
     <Router>
-      <ScrollToTop />
-      <div className="min-h-screen">
-        <Header />
-        
-        <main>
-          <Routes>
-            <Route path="/" element={<Home />} />
-            <Route path="/pricing" element={<Pricing />} />
-            <Route path="/faq" element={<FAQ />} />
-            <Route path="/gettingstarted" element={<GettingStarted />} />
-            <Route path="/organization-setup" element={<OrganizationSetup />} />
-            <Route path="/assistant" element={<ClauseAssistant />} />
-            <Route path="/reviewer" element={<ClauseReviewer />} />
-            <Route path="/explorer" element={<ClauseExplorer />} />
-            <Route path="/integratedservices" element={<IntegratedServices />} />
-            <Route path="/checkout" element={<Checkout />} />
-            <Route path="/privacy" element={<Privacy />} />
-            <Route path="/terms" element={<Terms />} />
-            <Route path="*" element={<NotFound />} />
-          </Routes>
-        </main>
-        
-        <Footer />
-      </div>
+      <AppContent />
     </Router>
   );
 }

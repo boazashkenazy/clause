@@ -84,9 +84,16 @@ const PricingCard: React.FC<PricingCardProps> = ({
         })}
       </ul>
       
-      <Button 
-        variant={popular ? 'primary' : 'outline'} 
+      <Button
+        variant={popular ? 'primary' : 'outline'}
         className="w-full"
+        trackingId={
+          cta === "Call Sales Team" ? 'pricing-cta-contact-sales' :
+          cta === "Try Clause Now Free" ? 'pricing-cta-try-free' :
+          cta === "Get Plus" ? 'pricing-cta-get-plus' :
+          cta === "Get Pro" ? 'pricing-cta-get-pro' :
+          'pricing-cta-other'
+        }
         onClick={
           cta === "Call Sales Team" ? () => {
             // Scroll to contact section on current page
