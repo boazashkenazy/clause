@@ -56,8 +56,8 @@ const Header: React.FC = () => {
       <Container>
         <div className="flex items-center justify-between">
           <div className="flex items-center">
-            <Link to="/" className="text-2xl font-bold text-primary-600">
-              Clause
+            <Link to="/" className="flex items-center">
+              <img src="/images/clause-logo.png" alt="Clause" className="h-8" />
             </Link>
           </div>
 
