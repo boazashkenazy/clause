@@ -15,7 +15,7 @@ const GettingStarted: React.FC = () => {
 
   useSEO({
     title: 'Getting Started - How to Install Clause for Microsoft Word',
-    description: 'Learn how to install and set up Clause for Microsoft Word in 5 simple steps. Complete installation guide with screenshots and troubleshooting tips.',
+    description: 'Learn how to install and set up Clause for Microsoft Word in 4 simple steps. Complete installation guide with screenshots and troubleshooting tips.',
     keywords: 'install Clause Word add-in, Microsoft Word legal add-in setup, how to install Clause AI, Word add-in installation guide, legal document software setup',
     canonical: 'https://clause.so/gettingstarted'
   });
@@ -29,18 +29,12 @@ const GettingStarted: React.FC = () => {
     },
     {
       step: 2,
-      title: 'Click the "More Add-ins" button',
-      description: "In the add-ins panel that opens, you'll see a 'More Add-ins' button. Click this to access the Office Add-ins store where you can find Clause.",
-      screenshot: "/images/step2-more-addins-button.png"
+      title: 'Search for "clauseagent" and click "Add"',
+      description: "In the add-ins search box, type 'clauseagent' (one word). When 'Clause AI legal assistant' appears in the search results, click the 'Add' button to install the add-in.",
+      screenshot: "/images/step2-search-for-addin.png"
     },
     {
       step: 3,
-      title: 'Search for "Clause AI" and click the "Add" button',
-      description: "In the Office Add-ins store, use the search box to look for 'Clause AI'. When you find it in the search results, click the 'Add' button to install the Clause for Word Add-in.",
-      screenshot: "/images/step3-office-store-search.png"
-    },
-    {
-      step: 4,
       title: 'Launch Clause with Sample Document',
       description: (
         <>
@@ -50,7 +44,7 @@ const GettingStarted: React.FC = () => {
       screenshot: "/images/step4-reviewing-mode.png"
     },
     {
-      step: 5,
+      step: 4,
       title: 'Try the Policy Review skill',
       description: "Click on the 'Policy Review' tab in the Clause panel. Below the Policy Review tab you'll see a play button - click it to run Clause's policy review on the sample document using the example policies.",
       screenshot: "/images/step5-clause-panel.png"
@@ -72,7 +66,7 @@ const GettingStarted: React.FC = () => {
               Get Started with Clause for Microsoft Word
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Install and set up Clause in just 5 simple steps. Start reviewing documents with AI-powered policy analysis in minutes.
+              Install and set up Clause in just 4 simple steps. Start reviewing documents with AI-powered policy analysis in minutes.
             </p>
             <motion.img 
               src="/images/clause-word.png" 
@@ -140,9 +134,9 @@ const GettingStarted: React.FC = () => {
 
             <div className="grid gap-6 md:grid-cols-2">
               <div className="bg-gray-50 rounded-xl p-6">
-                <h3 className="text-lg font-semibold text-gray-900 mb-3">Can't find Clause in the AppSource store?</h3>
+                <h3 className="text-lg font-semibold text-gray-900 mb-3">Can't find Clause in the add-ins search?</h3>
                 <p className="text-gray-600 text-sm">
-                  Make sure you're searching for "Clause AI" exactly. You can also try searching just "Clause" or visit the Microsoft AppSource directly.
+                  Make sure you're searching for "clauseagent" (one word, no spaces). The add-in will appear as "Clause AI legal assistant - ask questions" in the search results.
                 </p>
               </div>
               

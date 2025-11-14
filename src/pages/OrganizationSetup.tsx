@@ -15,7 +15,7 @@ const OrganizationSetup: React.FC = () => {
 
   useSEO({
     title: 'Organization Setup - Deploy Clause for Microsoft Word to Your Organization',
-    description: 'Learn how to deploy Clause for Microsoft Word across your organization in 4 simple steps. Complete admin guide for Microsoft 365 administrators.',
+    description: 'Deploy Clause for Microsoft Word across your organization using a direct AppSource link or step-by-step guide. Complete admin guide for Microsoft 365 administrators.',
     keywords: 'deploy Clause Word add-in organization, Microsoft 365 admin deployment, enterprise Word add-in setup, admin install Clause AI, organization policy management',
     canonical: 'https://clause.so/organization-setup'
   });
@@ -66,7 +66,7 @@ const OrganizationSetup: React.FC = () => {
               Deploy Clause for Microsoft Word to Your Organization
             </h1>
             <p className="text-xl text-gray-600 mb-8">
-              Administrators can deploy Clause across their organization in just 4 simple steps using the Microsoft 365 admin center.
+              Administrators can deploy Clause across their organization using a direct AppSource link or by following step-by-step instructions through the Microsoft 365 admin center.
             </p>
             <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 mb-8 max-w-2xl mx-auto">
               <p className="text-blue-800 font-medium">
@@ -77,10 +77,91 @@ const OrganizationSetup: React.FC = () => {
         </Container>
       </section>
 
-      {/* Installation Steps */}
-      <section className="py-6 bg-white">
+      {/* Deployment Options */}
+      <section className="py-12 bg-white">
         <Container>
-          <motion.div 
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            animate={{ opacity: 1, y: 0 }}
+            transition={{ duration: 0.6, delay: 0.3 }}
+            className="mx-auto max-w-5xl"
+          >
+            <div className="text-center mb-10">
+              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
+                Choose Your Deployment Method
+              </h2>
+              <p className="text-lg text-gray-600">
+                Select one of the two options below to deploy Clause to your organization
+              </p>
+            </div>
+
+            <div className="grid gap-6 md:grid-cols-2 mb-8">
+              {/* Option 1: Direct Link */}
+              <div className="bg-gradient-to-br from-primary-50 to-primary-100 rounded-xl p-8 border-2 border-primary-300">
+                <div className="flex items-start mb-4">
+                  <div className="flex-shrink-0 bg-primary-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">
+                    1
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Quick Deploy (Recommended)</h3>
+                    <p className="text-gray-700 mb-4">
+                      Go directly to the Clause add-in page on Microsoft AppSource. Click "Get it now" and you'll be redirected to your Microsoft 365 Admin Center to complete deployment.
+                    </p>
+                    <Button
+                      variant="primary"
+                      size="lg"
+                      onClick={() => window.open('https://marketplace.microsoft.com/en-us/product/office/WA200009091?tab=Overview', '_blank')}
+                      className="w-full flex items-center justify-center gap-2"
+                    >
+                      <ExternalLink size={20} />
+                      Deploy from AppSource
+                    </Button>
+                  </div>
+                </div>
+              </div>
+
+              {/* Option 2: Step-by-Step */}
+              <div className="bg-gray-50 rounded-xl p-8 border-2 border-gray-300">
+                <div className="flex items-start mb-4">
+                  <div className="flex-shrink-0 bg-gray-600 text-white rounded-full w-8 h-8 flex items-center justify-center font-bold mr-3">
+                    2
+                  </div>
+                  <div>
+                    <h3 className="text-xl font-bold text-gray-900 mb-2">Step-by-Step Guide</h3>
+                    <p className="text-gray-700 mb-4">
+                      Prefer detailed instructions? Follow our comprehensive step-by-step guide below that walks you through the deployment process from your Admin Center.
+                    </p>
+                    <Button
+                      variant="outline"
+                      size="lg"
+                      onClick={() => {
+                        const stepsSection = document.getElementById('deployment-steps');
+                        if (stepsSection) {
+                          stepsSection.scrollIntoView({ behavior: 'smooth' });
+                        }
+                      }}
+                      className="w-full"
+                    >
+                      View Step-by-Step Guide
+                    </Button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <div className="bg-blue-50 border border-blue-200 rounded-lg p-4 text-center">
+              <p className="text-blue-800">
+                <strong>Note:</strong> Both methods achieve the same result. Choose whichever method you're most comfortable with.
+              </p>
+            </div>
+          </motion.div>
+        </Container>
+      </section>
+
+      {/* Installation Steps */}
+      <section id="deployment-steps" className="py-6 bg-white border-t-2 border-gray-200">
+        <Container>
+          <motion.div
             ref={ref}
             initial={{ opacity: 0, y: 20 }}
             animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 20 }}
@@ -89,10 +170,10 @@ const OrganizationSetup: React.FC = () => {
           >
             <div className="text-center mb-16">
               <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl mb-4">
-                Deployment Steps
+                Step-by-Step Deployment Guide
               </h2>
               <p className="text-lg text-gray-600">
-                Follow these simple steps to deploy Clause to your entire organization
+                Follow these simple steps to deploy Clause from your Microsoft 365 Admin Center
               </p>
             </div>
 

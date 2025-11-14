@@ -149,7 +149,7 @@ const Header: React.FC = () => {
                 )}
               </div>
               
-              {/* <Link to="/pricing" className="text-gray-700 hover:text-primary-600">Pricing</Link> */}
+              <Link to="/pricing" className="text-gray-700 hover:text-primary-600">Pricing</Link>
               <Link to="/faq" className="text-gray-700 hover:text-primary-600">FAQ</Link>
               <a href="https://clauseai.substack.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary-600">Blog</a>
             </nav>
@@ -206,7 +206,7 @@ const Header: React.FC = () => {
                 </div>
               </div>
               
-              {/* <Link to="/pricing" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Pricing</Link> */}
+              <Link to="/pricing" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Pricing</Link>
               <Link to="/faq" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>FAQ</Link>
               <a href="https://clauseai.substack.com" target="_blank" rel="noopener noreferrer" className="text-gray-700 hover:text-primary-600" onClick={toggleMenu}>Blog</a>
               <Button variant="primary" onClick={() => {

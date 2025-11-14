@@ -131,30 +131,29 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onPurchase }) => {
       ],
       cta: "Try Clause Now Free"
     },
-    // {
-    //   title: "Plus",
-    //   price: { monthly: 30, yearly: 306 },
-    //   description: "Perfect for individuals.",
-    //   features: [
-    //     "Clause for Word",
-    //     "Priority support",
-    //     "2,000 credits/month"
-    //   ],
-    //   cta: "Get Plus",
-    //   popular: true
-    // },
+    {
+      title: "Plus",
+      price: { monthly: 30, yearly: 306 },
+      description: "Perfect for individuals.",
+      features: [
+        "Clause for Word",
+        "Priority support",
+        "2,000 credits/month"
+      ],
+      cta: "Get Plus",
+      popular: true
+    },
     {
       title: "Pro",
       price: { monthly: 150, yearly: 1530 },
-      description: "Perfect for individuals.",
+      description: "For power users.",
       features: [
         "Clause for Word",
         "Clause for Web",
         "Premium support",
         "10,000 credits/month"
       ],
-      cta: "Get Pro",
-      popular: true
+      cta: "Get Pro"
     },
     {
       title: "Enterprise",
@@ -185,11 +184,11 @@ const PricingSection: React.FC<PricingSectionProps> = ({ onPurchase }) => {
         >
         </motion.div>
 
-        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <div className="mt-12 grid gap-8 md:grid-cols-2 lg:grid-cols-4">
           {plans.map((plan, index) => (
-            <PricingCard 
-              key={plan.title} 
-              {...plan} 
+            <PricingCard
+              key={plan.title}
+              {...plan}
               isYearly={false}
               index={index}
               onPurchase={onPurchase}
