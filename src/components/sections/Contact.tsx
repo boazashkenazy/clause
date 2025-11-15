@@ -78,43 +78,80 @@ const Contact: React.FC = () => {
   };
 
   return (
-    <section id="contact" className="bg-gray-50 pt-24 pb-12">
+    <section id="contact" className="bg-white py-20">
       <Container>
         <div className="mx-auto max-w-7xl">
-          <div className="grid gap-10 lg:grid-cols-2">
-            <motion.div 
+          <div className="grid gap-12 lg:gap-16 lg:grid-cols-2 items-start">
+            <motion.div
               ref={ref}
               initial={{ opacity: 0, x: -30 }}
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: -30 }}
               transition={{ duration: 0.6 }}
             >
-              <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-                Get in Touch
+              <h2 className="text-4xl font-bold tracking-tight text-gray-900">
+                Ready to get started?
               </h2>
-              <p className="mt-4 text-lg text-gray-600">
-                Have questions or need assistance? We're here to help! Fill out the form and our team will get back to you shortly.
+              <p className="mt-4 text-lg text-gray-700 leading-relaxed">
+                Have questions or want to see Clause in action? Our team is here to help you transform your legal workflows.
               </p>
-              
-              <div className="mt-8">
-                <div className="flex items-center">
-                  <div className="rounded-full bg-primary-100 p-2 text-primary-600">
-                    <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-6 w-6">
-                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
-                    </svg>
+
+              <div className="mt-10 space-y-5">
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <div className="rounded-lg bg-primary-100 p-2.5 text-primary-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z" />
+                      </svg>
+                    </div>
                   </div>
                   <div className="ml-4">
-                    <h3 className="text-lg font-medium text-gray-900">Email us</h3>
+                    <h3 className="text-base font-semibold text-gray-900">Email us</h3>
                     <p className="mt-1 text-gray-600">info@clause.so</p>
+                    <p className="mt-1 text-sm text-gray-500">We respond within 24 hours</p>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <div className="rounded-lg bg-primary-100 p-2.5 text-primary-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-base font-semibold text-gray-900">Schedule a demo</h3>
+                    <p className="mt-1 text-gray-600">See Clause in action with our team</p>
+                    <a href="/gettingstarted" className="mt-1 text-sm font-medium text-primary-600 hover:text-primary-700">
+                      Book a time →
+                    </a>
+                  </div>
+                </div>
+
+                <div className="flex items-start">
+                  <div className="flex-shrink-0">
+                    <div className="rounded-lg bg-primary-100 p-2.5 text-primary-600">
+                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="ml-4">
+                    <h3 className="text-base font-semibold text-gray-900">Support center</h3>
+                    <p className="mt-1 text-gray-600">Browse FAQs and documentation</p>
+                    <a href="/faq" className="mt-1 text-sm font-medium text-primary-600 hover:text-primary-700">
+                      Visit FAQ →
+                    </a>
                   </div>
                 </div>
               </div>
             </motion.div>
             
-            <motion.div 
+            <motion.div
               initial={{ opacity: 0, x: 30 }}
               animate={inView ? { opacity: 1, x: 0 } : { opacity: 0, x: 30 }}
               transition={{ duration: 0.6, delay: 0.2 }}
-              className="rounded-xl bg-white p-8 shadow-sm"
+              className="rounded-xl bg-white p-8 shadow-xl border border-gray-200"
             >
               {isSuccess ? (
                 <div className="text-center py-8">

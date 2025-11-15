@@ -2,7 +2,7 @@ import React, { useState, useRef } from 'react';
 import Container from '../ui/Container';
 import Button from '../ui/Button';
 import { motion } from 'framer-motion';
-import { Play, Pause } from 'lucide-react';
+import { Play, CheckCircle2 } from 'lucide-react';
 
 const Hero: React.FC = () => {
   const [isVideoPlaying, setIsVideoPlaying] = useState(false);
@@ -31,100 +31,167 @@ const Hero: React.FC = () => {
     }
   };
 
+  const testimonials = [
+    {
+      quote: "Clause has transformed our document review process. What used to take hours now takes minutes.",
+      author: "Sarah Chen",
+      role: "General Counsel",
+      company: "TechCorp",
+      image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    {
+      quote: "The AI-powered drafting is remarkably accurate. It understands legal nuance in ways other tools don't.",
+      author: "Michael Rodriguez",
+      role: "Senior Counsel",
+      company: "Global Finance Inc",
+      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=200"
+    },
+    {
+      quote: "Finally, a legal AI tool that works where we actually work—in Microsoft Word. Game changer.",
+      author: "Jennifer Wang",
+      role: "VP Legal Operations",
+      company: "Enterprise Solutions",
+      image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=200"
+    }
+  ];
+
   return (
-    <section className="relative overflow-hidden bg-gradient-to-b from-gray-50 via-white to-white pt-16">
+    <section className="relative overflow-hidden bg-white pt-16">
+      {/* Main Hero Section - Split Layout */}
       <Container>
-        <div className="mx-auto max-w-7xl pb-16 pt-16 text-center lg:pt-20">
-          <motion.h1 
-            className="mx-auto max-w-4xl text-4xl font-bold tracking-tight text-gray-900 sm:text-5xl md:text-6xl"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+        <div className="grid lg:grid-cols-2 gap-10 lg:gap-12 items-center py-12 lg:py-16">
+          {/* Left Column - Content */}
+          <motion.div
+            initial={{ opacity: 0, x: -20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6 }}
+            className="max-w-xl"
           >
-            Legal Intelligence for Business
-          </motion.h1>
-          <motion.p 
-            className="mx-auto mt-6 max-w-2xl text-xl text-gray-600"
-            initial={{ opacity: 0, y: 20 }}
-            animate={{ opacity: 1, y: 0 }}
+            <h1 className="text-5xl font-bold tracking-tight text-gray-900 lg:text-6xl leading-tight">
+              Legal Intelligence for Business
+            </h1>
+
+            <p className="mt-6 text-xl leading-8 text-gray-700">
+              The full power of AI for research, drafting, review and revision—right where you work.
+            </p>
+
+            <div className="mt-8 flex flex-col sm:flex-row gap-4">
+              <Button
+                variant="primary"
+                size="lg"
+                onClick={() => window.location.href = '/gettingstarted'}
+              >
+                Try Clause Now
+              </Button>
+              <Button
+                variant="outline"
+                size="lg"
+                onClick={() => window.location.href = '/pricing'}
+              >
+                View Pricing
+              </Button>
+            </div>
+
+            <div className="mt-6 flex items-center gap-6 text-sm text-gray-600">
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-primary-600" />
+                <span>No credit card required</span>
+              </div>
+              <div className="flex items-center gap-2">
+                <CheckCircle2 className="w-5 h-5 text-primary-600" />
+                <span>500 free credits</span>
+              </div>
+            </div>
+          </motion.div>
+
+          {/* Right Column - Video Demo */}
+          <motion.div
+            initial={{ opacity: 0, x: 20 }}
+            animate={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, delay: 0.2 }}
           >
-            The full power of AI for research, drafting, review and revision—right where you work.
-          </motion.p>
-          <motion.div 
-            className="mt-10 flex flex-col items-center justify-center"
+            <div className="relative aspect-video overflow-hidden rounded-lg bg-gray-100 shadow-lg border border-gray-200">
+              {showVideo ? (
+                <video
+                  ref={videoRef}
+                  className="h-full w-full object-cover"
+                  poster="/images/clause-screencapture.jpg"
+                  controls
+                  onPlay={() => setIsVideoPlaying(true)}
+                  onPause={() => setIsVideoPlaying(false)}
+                  onEnded={() => {
+                    setIsVideoPlaying(false);
+                    setShowVideo(false);
+                  }}
+                >
+                  <source src="/images/clause-demo-video.mp4" type="video/mp4" />
+                  Your browser does not support the video tag.
+                </video>
+              ) : (
+                <div className="relative cursor-pointer group h-full w-full" onClick={toggleVideo}>
+                  <img
+                    src="/images/clause-screencapture.jpg"
+                    alt="Clause AI demo video showing policy review and document analysis in Microsoft Word"
+                    className="h-full w-full object-cover"
+                  />
+                  <div className="absolute inset-0 flex items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
+                    <div className="flex items-center justify-center w-16 h-16 bg-white rounded-full group-hover:scale-110 transition-all shadow-lg">
+                      <Play className="w-6 h-6 text-primary-600 ml-0.5" fill="currentColor" />
+                    </div>
+                  </div>
+                </div>
+              )}
+            </div>
+          </motion.div>
+        </div>
+      </Container>
+
+      {/* Testimonials Section */}
+      <div className="bg-gray-50 border-y border-gray-200 py-14">
+        <Container>
+          <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <Button 
-              variant="primary" 
-              size="lg" 
-              onClick={() => window.location.href = '/gettingstarted'}
-            >
-              Try Clause Now
-            </Button>
-          </motion.div>
-        </div>
-      </Container>
-      
-      <div className="relative mx-auto max-w-5xl px-4 pb-20 sm:px-6 lg:px-8">
-        <motion.div 
-          className="text-center"
-          initial={{ opacity: 0, y: 20 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.6, delay: 0.6 }}
-        >
-          <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            See Clause in Action
-          </h2>
-          <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Watch how Clause transforms document Research and Drafting workflows in seconds.
-          </p>
-        </motion.div>
+            <p className="text-center text-sm font-medium text-gray-600 mb-10">
+              Trusted by Legal Teams
+            </p>
 
-        <motion.div 
-          className="mt-12 flex flex-col items-center gap-8"
-          initial={{ opacity: 0, y: 40 }}
-          animate={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, delay: 0.8 }}
-        >
-          {/* Video container */}
-          <div className="relative aspect-video overflow-hidden rounded-xl bg-gray-100 shadow-lg w-full max-w-4xl">
-            {showVideo ? (
-              <video
-                ref={videoRef}
-                className="h-full w-full object-cover"
-                poster="/images/clause-screencapture.jpg"
-                controls
-                onPlay={() => setIsVideoPlaying(true)}
-                onPause={() => setIsVideoPlaying(false)}
-                onEnded={() => {
-                  setIsVideoPlaying(false);
-                  setShowVideo(false);
-                }}
-              >
-                <source src="/images/clause-demo-video.mp4" type="video/mp4" />
-                Your browser does not support the video tag.
-              </video>
-            ) : (
-              <div className="relative cursor-pointer group h-full w-full" onClick={toggleVideo}>
-                <img 
-                  src="/images/clause-screencapture.jpg"
-                  alt="Clause AI demo video showing policy review and document analysis in Microsoft Word" 
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-                  <div className="flex items-center justify-center w-20 h-20 bg-white/90 rounded-full group-hover:bg-white group-hover:scale-110 transition-all">
-                    <Play className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" />
+            <div className="grid md:grid-cols-3 gap-6 lg:gap-8">
+              {testimonials.map((testimonial, index) => (
+                <motion.div
+                  key={index}
+                  initial={{ opacity: 0, y: 20 }}
+                  animate={{ opacity: 1, y: 0 }}
+                  transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
+                  className="bg-white rounded-lg p-8 shadow-sm border border-gray-200"
+                >
+                  <p className="text-base text-gray-700 leading-relaxed">
+                    "{testimonial.quote}"
+                  </p>
+
+                  <div className="mt-6 flex items-center gap-3">
+                    <img
+                      src={testimonial.image}
+                      alt={testimonial.author}
+                      className="w-12 h-12 rounded-full object-cover"
+                    />
+                    <div>
+                      <div className="font-semibold text-gray-900 text-sm">
+                        {testimonial.author}
+                      </div>
+                      <div className="text-gray-600 text-sm">
+                        {testimonial.role}, {testimonial.company}
+                      </div>
+                    </div>
                   </div>
-                </div>
-              </div>
-            )}
-          </div>
-        </motion.div>
+                </motion.div>
+              ))}
+            </div>
+          </motion.div>
+        </Container>
       </div>
-
     </section>
   );
 };
