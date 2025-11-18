@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
-import AssistantVideoDemo from '../components/sections/AssistantVideoDemo';
 import AssistantHowItWorks from '../components/sections/AssistantHowItWorks';
 import Newsletter from '../components/sections/Newsletter';
 import Contact from '../components/sections/Contact';
@@ -62,9 +61,6 @@ const ClauseAssistant: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      {/* Video Section */}
-      <AssistantVideoDemo />
 
       {/* Benefits Section */}
       <AssistantHowItWorks />

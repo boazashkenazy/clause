@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
-import ExplorerVideoDemo from '../components/sections/ExplorerVideoDemo';
 import ExplorerHowItWorks from '../components/sections/ExplorerHowItWorks';
 import Newsletter from '../components/sections/Newsletter';
 import Contact from '../components/sections/Contact';
@@ -55,9 +54,6 @@ const ClauseExplorer: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      {/* Video Section */}
-      <ExplorerVideoDemo />
 
       {/* Benefits Section */}
       <ExplorerHowItWorks />

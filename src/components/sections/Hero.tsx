@@ -33,25 +33,28 @@ const Hero: React.FC = () => {
 
   const testimonials = [
     {
-      quote: "Clause has transformed our document review process. What used to take hours now takes minutes.",
-      author: "Sarah Chen",
-      role: "General Counsel",
-      company: "TechCorp",
-      image: "https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=200"
+      quote: "I've been using Clause for about seven months. What I really like about it is the simplicity and ease of use. There's very little management or input that I need to produce. I can simply tell Clause what to do and it does it.",
+      author: "Kyle Dostal",
+      role: "Attorney",
+      company: "Koley Jessen",
+      image: "/images/profile-kyle-dostal.png",
+      companyLogo: "/images/company-logo-kj.png"
     },
     {
-      quote: "The AI-powered drafting is remarkably accurate. It understands legal nuance in ways other tools don't.",
-      author: "Michael Rodriguez",
-      role: "Senior Counsel",
-      company: "Global Finance Inc",
-      image: "https://images.pexels.com/photos/2182970/pexels-photo-2182970.jpeg?auto=compress&cs=tinysrgb&w=200"
+      quote: "I can tell Clause what to do and trust that what it produces is effective for my client and is a quality work product. I have a lot of trust that what Clause produced is accurate",
+      author: "Scott Giordano",
+      role: "Senior Attorney",
+      company: "The CISO Law Firm",
+      image: "/images/profile-scott-giordano.png",
+      companyLogo: "/images/company-logo-ciso.png"
     },
     {
-      quote: "Finally, a legal AI tool that works where we actually work—in Microsoft Word. Game changer.",
-      author: "Jennifer Wang",
-      role: "VP Legal Operations",
-      company: "Enterprise Solutions",
-      image: "https://images.pexels.com/photos/733872/pexels-photo-733872.jpeg?auto=compress&cs=tinysrgb&w=200"
+      quote: "Clause is my go-to AI drafting solution. Clause consistently delivers high quality drafting suggestions natively in Word. I have tried multiple different tools and this is the first to integrate frictionlessly into my workflow—a true force multiplier for any boutique firm.",
+      author: "Lachlan Huck",
+      role: "Attorney",
+      company: "Focal PLLC",
+      image: "/images/profile-lachlan-huck.png",
+      companyLogo: "/images/company-logo-focal.png"
     }
   ];
 
@@ -147,14 +150,14 @@ const Hero: React.FC = () => {
       </Container>
 
       {/* Testimonials Section */}
-      <div className="bg-gray-50 border-y border-gray-200 py-14">
+      <div className="bg-gray-50 border-y border-gray-200 py-10">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 20 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6, delay: 0.4 }}
           >
-            <p className="text-center text-sm font-medium text-gray-600 mb-10">
+            <p className="text-center text-sm font-medium text-gray-600 mb-8">
               Trusted by Legal Teams
             </p>
 
@@ -165,12 +168,23 @@ const Hero: React.FC = () => {
                   initial={{ opacity: 0, y: 20 }}
                   animate={{ opacity: 1, y: 0 }}
                   transition={{ duration: 0.6, delay: 0.5 + index * 0.1 }}
-                  className="bg-white rounded-lg p-8 shadow-sm border border-gray-200"
+                  className="bg-white rounded-lg p-8 shadow-sm border border-gray-200 h-full flex flex-col"
                 >
-                  <p className="text-base text-gray-700 leading-relaxed">
+                  {/* Company Logo */}
+                  <div className="mb-6 h-10 flex items-center justify-center">
+                    <img
+                      src={testimonial.companyLogo}
+                      alt={testimonial.company}
+                      className="h-8 w-auto object-contain opacity-70 grayscale hover:grayscale-0 hover:opacity-100 transition-all"
+                    />
+                  </div>
+
+                  {/* Quote */}
+                  <p className="text-base text-gray-700 leading-relaxed flex-grow">
                     "{testimonial.quote}"
                   </p>
 
+                  {/* Author */}
                   <div className="mt-6 flex items-center gap-3">
                     <img
                       src={testimonial.image}

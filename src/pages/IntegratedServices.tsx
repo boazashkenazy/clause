@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
-import IntegratedServicesVideoDemo from '../components/sections/IntegratedServicesVideoDemo';
 import IntegratedServicesHowItWorks from '../components/sections/IntegratedServicesHowItWorks';
 import Newsletter from '../components/sections/Newsletter';
 import Contact from '../components/sections/Contact';
@@ -55,9 +54,6 @@ const IntegratedServices: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      {/* Video Section */}
-      <IntegratedServicesVideoDemo />
 
       {/* Benefits Section */}
       <IntegratedServicesHowItWorks />

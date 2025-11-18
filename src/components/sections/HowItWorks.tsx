@@ -6,7 +6,7 @@ import { CheckCircle2, ArrowRight } from 'lucide-react';
 
 interface FeatureProps {
   title: string;
-  description: string;
+  description: React.ReactNode;
   bullets: string[];
   image: string;
   imageAlt: string;
@@ -28,7 +28,7 @@ const Feature: React.FC<FeatureProps> = ({ title, description, bullets, image, i
       initial={{ opacity: 0, y: 30 }}
       animate={inView ? { opacity: 1, y: 0 } : { opacity: 0, y: 30 }}
       transition={{ duration: 0.6, delay: 0.2 }}
-      className={`grid lg:grid-cols-2 gap-10 lg:gap-16 items-center ${!isEven ? 'lg:flex-row-reverse' : ''}`}
+      className={`grid lg:grid-cols-2 gap-16 lg:gap-24 items-center ${!isEven ? 'lg:flex-row-reverse' : ''}`}
     >
       {/* Image */}
       <div className={`${!isEven ? 'lg:order-2' : ''}`}>
@@ -69,21 +69,8 @@ const Feature: React.FC<FeatureProps> = ({ title, description, bullets, image, i
 const HowItWorks: React.FC = () => {
   const features = [
     {
-      title: "Document Research",
-      description: "Clause Explorer helps you get cited, supported answers to questions that may span many documents, and manage content for drafting and collaboration",
-      bullets: [
-        "Search across unlimited documents simultaneously",
-        "Get cited answers with source references to support your work",
-        "Build reusable clause libraries for your team",
-        "Manage and curate content for drafting and collaboration"
-      ],
-      image: "/images/explorer.png",
-      imageAlt: "Clause Explorer - Research across legal documents",
-      link: "/explorer"
-    },
-    {
-      title: "AI Drafting Assistant",
-      description: "Clause Assistant brings the full power of the most advanced AI models into your Word environment for analysis, drafting or revising, including access to curated content",
+      title: "Drafting Assistant",
+      description: <><strong>Clause Assistant</strong> brings the full power of the most advanced AI models into your Word environment for analysis, drafting or revising, including access to curated content</>,
       bullets: [
         "AI-powered drafting and revision directly in Microsoft Word",
         "Access to advanced GPT models with legal context",
@@ -96,7 +83,7 @@ const HowItWorks: React.FC = () => {
     },
     {
       title: "Playbook Review",
-      description: "Clause Reviewer automatically redlines documents inside of Microsoft Word, or in bulk to comply with your internal policies",
+      description: <><strong>Clause Playbook Review</strong> automatically redlines documents inside of Microsoft Word, or in bulk to comply with your internal policies</>,
       bullets: [
         "Automated redlining against your company policies",
         "Review documents individually or in bulk",
@@ -106,6 +93,19 @@ const HowItWorks: React.FC = () => {
       image: "/images/playbook-review.png",
       imageAlt: "Clause Reviewer - Automated policy compliance review",
       link: "/reviewer"
+    },
+    {
+      title: "Document Research",
+      description: <><strong>Clause Explorer</strong> helps you get cited, supported answers to questions that may span many documents, and manage content for drafting and collaboration</>,
+      bullets: [
+        "Search across unlimited documents simultaneously",
+        "Get cited answers with source references to support your work",
+        "Build reusable clause libraries for your team",
+        "Manage and curate content for drafting and collaboration"
+      ],
+      image: "/images/explorer.png",
+      imageAlt: "Clause Explorer - Research across legal documents",
+      link: "/explorer"
     }
   ];
 

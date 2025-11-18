@@ -1,7 +1,6 @@
 import React from 'react';
 import Container from '../components/ui/Container';
 import Button from '../components/ui/Button';
-import ReviewerVideoDemo from '../components/sections/ReviewerVideoDemo';
 import ReviewerHowItWorks from '../components/sections/ReviewerHowItWorks';
 import Newsletter from '../components/sections/Newsletter';
 import Contact from '../components/sections/Contact';
@@ -62,9 +61,6 @@ const ClauseReviewer: React.FC = () => {
           </div>
         </Container>
       </section>
-
-      {/* Video Section */}
-      <ReviewerVideoDemo />
 
       {/* Benefits Section */}
       <ReviewerHowItWorks />

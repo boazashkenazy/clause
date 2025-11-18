@@ -115,23 +115,6 @@ const Contact: React.FC = () => {
                   <div className="flex-shrink-0">
                     <div className="rounded-lg bg-primary-100 p-2.5 text-primary-600">
                       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5">
-                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z" />
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="ml-4">
-                    <h3 className="text-base font-semibold text-gray-900">Schedule a demo</h3>
-                    <p className="mt-1 text-gray-600">See Clause in action with our team</p>
-                    <a href="/gettingstarted" className="mt-1 text-sm font-medium text-primary-600 hover:text-primary-700">
-                      Book a time →
-                    </a>
-                  </div>
-                </div>
-
-                <div className="flex items-start">
-                  <div className="flex-shrink-0">
-                    <div className="rounded-lg bg-primary-100 p-2.5 text-primary-600">
-                      <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor" className="h-5 w-5">
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M18.364 5.636l-3.536 3.536m0 5.656l3.536 3.536M9.172 9.172L5.636 5.636m3.536 9.192l-3.536 3.536M21 12a9 9 0 11-18 0 9 9 0 0118 0zm-5 0a4 4 0 11-8 0 4 4 0 018 0z" />
                       </svg>
                     </div>

@@ -10,10 +10,10 @@ const Trust: React.FC = () => {
   });
 
   const testimonial = {
-    quote: "Clause has transformed our document review process. What used to take hours now takes minutes, and the accuracy is remarkable.",
-    author: "Sarah Chen",
-    role: "General Counsel",
-    company: "TechCorp Legal"
+    quote: "I can tell Clause what to do and trust that what it produces is effective for my client and is a quality work product. I have a lot of trust that what Clause produced is accurate",
+    author: "Scott Giordano",
+    role: "Senior Attorney",
+    company: "The CISO Law Firm"
   };
 
   return (
@@ -39,8 +39,8 @@ const Trust: React.FC = () => {
                   <div className="md:flex-shrink-0">
                     <img
                       className="mx-auto h-16 w-16 rounded-full object-cover"
-                      src="https://images.pexels.com/photos/762020/pexels-photo-762020.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2"
-                      alt=""
+                      src="/images/profile-scott-giordano.png"
+                      alt="Scott Giordano"
                     />
                   </div>
                   <div className="mt-3 text-center md:mt-0 md:ml-4 md:flex md:items-center">
