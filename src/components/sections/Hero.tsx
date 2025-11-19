@@ -41,7 +41,7 @@ const Hero: React.FC = () => {
       companyLogo: "/images/company-logo-kj.png"
     },
     {
-      quote: "I can tell Clause what to do and trust that what it produces is effective for my client and is a quality work product. I have a lot of trust that what Clause produced is accurate",
+      quote: "I have used a variety of AI-powered tools in my practice and Clause has been a tremendous addition, enabling me to both improve the quality of my work and accomplish more in the same amount of time.",
       author: "Scott Giordano",
       role: "Senior Attorney",
       company: "The CISO Law Firm",
