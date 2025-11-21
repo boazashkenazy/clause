@@ -47,10 +47,10 @@ const ExplorerVideoDemo: React.FC = () => {
           className="mx-auto max-w-3xl text-center"
         >
           <h2 className="text-3xl font-bold tracking-tight text-gray-900 sm:text-4xl">
-            See Clause Explorer in Action
+            See Explorer in Action
           </h2>
           <p className="mx-auto mt-4 max-w-2xl text-lg text-gray-600">
-            Watch how Clause transforms document reviewing in just seconds.
+            Watch how Explorer makes every contract in your library instantly searchable with cited answers and reusable collections.
           </p>
         </motion.div>
 
@@ -65,7 +65,6 @@ const ExplorerVideoDemo: React.FC = () => {
               <video
                 ref={videoRef}
                 className="h-full w-full object-cover"
-                poster="/images/clause-screencapture.jpg"
                 controls
                 onPlay={() => setIsVideoPlaying(true)}
                 onPause={() => setIsVideoPlaying(false)}
@@ -74,20 +73,16 @@ const ExplorerVideoDemo: React.FC = () => {
                   setShowVideo(false);
                 }}
               >
-                <source src="/images/clause-demo-video.mp4" type="video/mp4" />
+                <source src="/images/explorer_video.mp4" type="video/mp4" />
                 Your browser does not support the video tag.
               </video>
             ) : (
-              <div className="relative cursor-pointer group h-full w-full" onClick={toggleVideo}>
-                <img 
-                  src="/images/clause-screencapture.jpg"
-                  alt="Interactive demo of Clause AI analyzing legal documents with policy review in Microsoft Word" 
-                  className="h-full w-full object-cover"
-                />
-                <div className="absolute inset-0 flex items-center justify-center bg-black/20 group-hover:bg-black/30 transition-colors">
-                  <div className="flex items-center justify-center w-20 h-20 bg-white/90 rounded-full group-hover:bg-white group-hover:scale-110 transition-all">
+              <div className="relative cursor-pointer group h-full w-full bg-gradient-to-br from-primary-100 to-gray-200" onClick={toggleVideo}>
+                <div className="absolute inset-0 flex flex-col items-center justify-center bg-black/10 group-hover:bg-black/20 transition-colors">
+                  <div className="flex items-center justify-center w-20 h-20 bg-white/90 rounded-full group-hover:bg-white group-hover:scale-110 transition-all mb-4">
                     <Play className="w-8 h-8 text-gray-900 ml-1" fill="currentColor" />
                   </div>
+                  <p className="text-white text-lg font-semibold drop-shadow-lg">Watch Demo Video</p>
                 </div>
               </div>
             )}
