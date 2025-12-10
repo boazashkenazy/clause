@@ -14,6 +14,7 @@ import ClauseAssistant from './pages/ClauseAssistant';
 import ClauseReviewer from './pages/ClauseReviewer';
 import ClauseExplorer from './pages/ClauseExplorer';
 import IntegratedServices from './pages/IntegratedServices';
+import FirmAdvantage from './pages/FirmAdvantage';
 import NotFound from './pages/NotFound';
 import { useEffect } from 'react';
 
@@ -45,6 +46,7 @@ function App() {
             <Route path="/reviewer" element={<ClauseReviewer />} />
             <Route path="/explorer" element={<ClauseExplorer />} />
             <Route path="/integratedservices" element={<IntegratedServices />} />
+            <Route path="/advantage" element={<FirmAdvantage />} />
             <Route path="/checkout" element={<Checkout />} />
             <Route path="/privacy" element={<Privacy />} />
             <Route path="/terms" element={<Terms />} />
