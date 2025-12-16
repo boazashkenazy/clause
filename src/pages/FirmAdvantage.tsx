@@ -131,7 +131,7 @@ const FirmAdvantage: React.FC = () => {
 
   useSEO({
     title: 'Clause Firm Advantage Program | AI Enablement for Law Firms',
-    description: 'Complete AI enablement package for law firms. Unlimited Pro licenses, document library ingestion, dedicated AI success partnership, and custom enhancements.',
+    description: 'Complete AI enablement package for law firms. Up to 10 Pro licenses, document library ingestion, dedicated AI success partnership, and custom enhancements.',
     keywords: 'law firm AI, legal AI enablement, Clause for law firms, AI legal drafting, law firm technology',
     canonical: 'https://clause.so/advantage'
   });
@@ -156,7 +156,7 @@ const FirmAdvantage: React.FC = () => {
       price: "$24,750",
       description: "Everything for firm-wide AI adoption.",
       features: [
-        "Unlimited Clause Pro licenses",
+        "Up to 10 Clause Pro licenses",
         "Full document library ingestion + monthly curation",
         "Bi-monthly office hours for all users",
         "Bi-monthly practice-area user groups (up to 10/group)",
