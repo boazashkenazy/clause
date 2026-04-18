@@ -59,7 +59,7 @@ const Footer: React.FC = () => {
             <ul className="mt-4 space-y-2">
               <li><Link to="/" onClick={() => scrollToSection('features')} className="text-gray-600 hover:text-primary-600">Features</Link></li>
               <li><Link to="/" onClick={() => scrollToSection('how-it-works')} className="text-gray-600 hover:text-primary-600">How It Works</Link></li>
-              <li><Link to="/pricing" className="text-gray-600 hover:text-primary-600">Pricing</Link></li>
+              {/* <li><Link to="/pricing" className="text-gray-600 hover:text-primary-600">Pricing</Link></li> */}
               <li><Link to="/faq" className="text-gray-600 hover:text-primary-600">FAQ</Link></li>
             </ul>
           </div>

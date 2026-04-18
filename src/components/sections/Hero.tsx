@@ -86,13 +86,13 @@ const Hero: React.FC = () => {
               >
                 Try Clause Now
               </Button>
-              <Button
+              {/* <Button
                 variant="outline"
                 size="lg"
                 onClick={() => window.location.href = '/pricing'}
               >
                 View Pricing
-              </Button>
+              </Button> */}
             </div>
 
             <div className="mt-6 flex items-center gap-6 text-sm text-gray-600">

@@ -80,13 +80,13 @@ const ClauseAssistant: React.FC = () => {
                   >
                     Try Clause Now
                   </Button>
-                  <Button
+                  {/* <Button
                     variant="outline"
                     size="lg"
                     onClick={() => window.location.href = '/pricing'}
                   >
                     View Pricing
-                  </Button>
+                  </Button> */}
                 </motion.div>
                 <motion.div
                   className="mt-6 flex items-start gap-6 text-sm text-gray-600"

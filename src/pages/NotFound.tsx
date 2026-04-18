@@ -94,13 +94,13 @@ const NotFound: React.FC = () => {
                   <p className="text-sm text-gray-600">Learn how to install and use Clause</p>
                 </Link>
                 
-                <Link 
-                  to="/pricing" 
+                {/* <Link
+                  to="/pricing"
                   className="p-4 rounded-lg border border-gray-200 hover:border-primary-300 hover:bg-primary-50 transition-colors text-left"
                 >
                   <h4 className="font-medium text-gray-900 mb-2">Pricing Plans</h4>
                   <p className="text-sm text-gray-600">Find the perfect plan for your needs</p>
-                </Link>
+                </Link> */}
                 
                 <Link 
                   to="/faq" 

@@ -133,13 +133,13 @@ const VideoTestimonial: React.FC = () => {
                 >
                   Try Clause Now
                 </Button>
-                <Button
+                {/* <Button
                   variant="outline"
                   size="lg"
                   onClick={() => window.location.href = '/pricing'}
                 >
                   View Pricing
-                </Button>
+                </Button> */}
               </div>
             </motion.div>
           </div>

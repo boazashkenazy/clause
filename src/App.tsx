@@ -3,7 +3,7 @@ import { BrowserRouter as Router, Routes, Route, useLocation } from 'react-route
 import Header from './components/layout/Header';
 import Footer from './components/layout/Footer';
 import Home from './pages/Home';
-import Pricing from './pages/Pricing';
+// import Pricing from './pages/Pricing';
 import FAQ from './pages/FAQ';
 import Checkout from './pages/Checkout';
 import Privacy from './pages/Privacy';
@@ -38,7 +38,7 @@ function App() {
         <main>
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route path="/pricing" element={<Pricing />} />
+            {/* <Route path="/pricing" element={<Pricing />} /> */}
             <Route path="/faq" element={<FAQ />} />
             <Route path="/gettingstarted" element={<GettingStarted />} />
             <Route path="/organization-setup" element={<OrganizationSetup />} />
